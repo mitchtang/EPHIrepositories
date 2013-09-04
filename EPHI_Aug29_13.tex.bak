@@ -1,0 +1,1737 @@
+\documentclass[legno,11pt]{article}
+%\usepackage[utf8x]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pifont}
+%\usepackage{natbib}
+\usepackage{fleqn}
+%\usepackage{txfonts}
+%\usepackage{hyperref}
+%usepackage[numbers]{natbib}
+%usepackage{elsarticle-harv}
+
+%\usepackage{harvard}
+\usepackage[left=3cm,top=2cm,right=3cm,nohead]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{sectsty}
+\allsectionsfont{\centering} \makeatletter
+\def\@seccntformat#1{\csname the#1\endcsname.\hspace{0.2cm}}
+\makeatother
+\usepackage{amsfonts}
+\usepackage[onehalfspacing]{setspace}
+
+%\usepackage[sort&compress]{natbib}
+%\bibpunct{}{}{,}{n}{}{;}
+
+%$\usepackage[headings]{fullpage}
+%\usepackage{setspace}
+
+\doublespacing
+%\usepackage[norule]{footmisc}
+%
+%\usepackage{hyperref}
+%\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{longtable,lscape}
+\usepackage{rotating,threeparttable}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{dcolumn,booktabs}
+\newcolumntype{d}[1]{D{,}{,}{#1}}
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+%\usepackage{graphicx,color,pstcol,pst-tree}
+%\usepackage{pst-node,pst-tree}
+%\makeatletter % Reference list option change
+%\renewcommand\@biblabel[1]{} % from [1] to 1.
+%\makeatother %
+
+
+\renewcommand{\abstractname}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\newcommand{\bpara}[4]{ % #1 x; #2 y; #3 angle; #4 height
+\begin{picture}(0,0)%
+\setlength{\unitlength}{1pt}%
+\put(#1,#2){\rotatebox{#3}{\raisebox{0mm}[0mm][0mm]{%
+\makebox[0mm]{$\left.\rule{0mm}{#4pt}\right\}$}}}}%
+\end{picture}}
+
+\abovecaptionskip=8pt \belowcaptionskip=0pt
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{exe}[thm]{Exercise}
+\newtheorem{rek}[thm]{Remark}
+\newtheorem{assum}{Assumption}
+
+%\linespread{1.9}
+%\linespread{1.55}
+%\input{tcilatex}
+\begin{document}
+
+\title{Household Preferences for Employer-Provided Health
+Insurance: An Empirical Discrete Games Approach
+\thanks{We thank Kamhon Kan, Wen-Jen Tsay, and the seminar participants at National Chung Cheng University, Academia Sinica, National Taipei University, the  $12^{th}$ Empirical Economics Conference at Taiwan, and the CEANA-NTU-TEA session at the 2012 Annual Meeting of American Economic Association for various comments and suggestions regarding this paper. Wan-Ting Chen, Wan-Ning Chiu and Tsong-Yuen Hu provided research assistance. The usual disclaimer applies.}
+}
+\author{Ji-Liang Shiu
+\thanks{%
+Hanqing Advanced Institute of Economics and Finance, Renmin
+University of China, Beijing 100872, P.R.China. Email:
+jishiu@ruc.edu.cn.}and Meng-Chi Tang\thanks{Department of Economics,
+National Chung-Cheng University, 168 University Rd. Min-Hsiung
+Chia-Yi, Taiwan. Email: ecdmct@ccu.edu.tw. } }
+
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This paper examines how a spouse's access to employer-provided
+health insurance (EPHI) affects preferences to acquire the same
+access at both the individual and household level. Regarding
+household joint EPHI access decisions in the labor market
+equilibrium as a cooperative, simultaneous game between husband and
+wife, this paper shows how this joint decision is affected by the
+consideration of family bargaining power balance. This study
+investigates this joint decision using panel data from the
+Medical Expenditure Panel Survey. Our empirical estimation
+controls for unobserved fixed effects, and allows the EPHI
+access of both husband and wife to be endogenous.
+Empirical results show that spousal access to EPHI is
+negatively related to own EPHI access, indicating that
+household members as a unit prefer single EPHI access
+to dual access. Using family income share as a proxy for
+individual indirect utility, this study shows that the husband's incremental disutility of having
+spousal EPHI access is greater than that of the wife.
+This study explains the results by considering the bargaining power balance within households, which provides a new perspective
+on how married couples make joint EPHI access decisions.
+
+%This paper examines how a spouse's access to employer-provided
+%health insurance (EPHI) affects preferences to acquire the same
+%access at both the individual and household level. We consider this
+%strategic interaction as power balance within household under a
+%cooperative game framework, and allow the spouse's EPHI access to be
+%endogenous using panel data models. Empirical results show that
+%spousal access to EPHI is negatively related to own EPHI access, and
+%the husband's incremental disutility of having spousal EPHI access
+%is greater than that of the wife. This paper provides a new
+%perspective on household EPHI joint decisions.
+\end{abstract}
+
+%\textbf{Keywords:} employer-provided health insurance; family bargaining power; joint decision; gender differences
+%\thispagestyle{empty}
+
+%\pagestyle{plain}
+
+\newpage
+\section{Introduction}\label{section1}
+test man test
+does tthis work mannnnn
+
+While marital status is an important factor in individual health
+status and employment decisions, previous studies on these decisions
+focus almost exclusively on men. This is primarily because the labor
+force participation rate of women used to be low, and a fairly large
+percentage of women were insured through their husbands. Therefore,
+the potential behavioral effects of women in this type of
+decision-making were relatively insignificant. Nevertheless, due to
+recent dramatic increase in female labor force participation, many
+individuals now live in households where both husband and wife work.
+As a result, many families have two potential sources of health
+insurance coverage from both husband's and wife's employers, and the
+number of households in which women are the primary insurers of
+their families is also increasing. Consequently, it is important to
+study husband's and wife's health insurance and employment decisions
+jointly at the household level.\footnote{Abraham and Royalty (2005)
+emphasized the importance of considering this type of joint
+decisions at the household level. Their arguments are supported by
+empirical evidence showing that having a second earner in household
+significantly changes the household health insurance options. }
+\par
+This study focuses on household joint decisions about
+employer-provided health insurance (EPHI). EPHI is popular in the
+United States because it is usually much more generous than the
+health insurance provided in the non-group market.\footnote{In the
+United States, approximately 71\% of non-elderly Americans are
+covered by private health insurance. Of that total, 90\% are covered
+through EPHI.} Employers can also reduce adverse selection problems
+and administrative expenses by pooling healthy and unhealthy
+employees.\footnote{The costs of health insurance in large firms is
+almost 35\% lower than in small firms.} In addition, there is a tax
+incentive for employers to provide health insurance.\footnote{See
+Woodbury and Huang (1991), Gruber and Poterba (1996), Gentry and
+Peress (1994), and Royalty (2000) for related discussions.} However,
+it is not clear why some families have two earners with dual EPHI
+access, since most of EPHI provides family coverage. Royalty and
+Abraham (2006) argued that there may be some tradeoffs to having a
+job with EPHI, such as more hours of work. For example, if one
+member has a job with EPHI access, the other member must take over
+more of the housework or child caring activities, and is therefore
+less likely to have a job with EPHI access. In this paper, having
+the access to EPHI can be considered as a source of family
+bargaining power.\footnote{Having EPHI access can be incorporated
+into McElroy (1990)'s framework as an extrahousehold environmental
+parameter in the bargaining power function.} One may argue that the
+EPHI decision might have much less to do with the bargaining power
+within families. The EPHI decision is just a result of preferences
+for personal work. This view ignores that the potential health and
+monetary benefits come from EPHI and family members of EPHI holders
+receive higher benefits or has greater access to resources.
+Providing EPHI to families often carries more influence in family
+decision-making and the extent to which the EPHI decision is related
+to power shift within a family.
+
+Since individual bargaining power within the household represents
+personal well-being at the threat point in the cooperative Nash
+bargaining model, access to EPHI is an important source of family
+bargaining power. This creates an incentive for family members to
+acquire a job with EPHI access regardless of whether spousal EPHI
+access is available. Therefore, how husband and wife make their
+health insurance joint decision
+when facing these potential tradeoffs is ambiguous.%
+\footnote{Monheit et al. (1999), Marquis and Kapur (2004), and
+Abraham et al. (2005) provided explanations why two-earners family
+may choose double coverage by looking at the actual EPHI coverage
+rather than access to it. There may be some cost advantages for a
+family to have dual EPHI coverage, and different EPHI programs may
+also provide different coverage plans that family needs. Abraham et
+al. (2002) also investigated the differences in behavior between
+household with dual and single EPHI access when estimating a model
+of household demand for health insurance. Dey and Flinn (2008)
+showed there is an option value to find a job with EPHI access even
+when spousal EPHI access is offered, because it is likely that
+spouse may lose his/her job in the future. Following Royalty and
+Abraham (2006), this study focuses on whether individual has EPHI
+access, but not whether the individual holds the EPHI offer.}
+%\textbf{Shiu Oct03
+%2012}\footnote{One may argue that the EPHI decision might have much
+%less to do with the bargaining power within families. The EPHI
+%decision is just a result of preferences for personal work. This
+%view ignore that the potential better health and monetary benefits
+%brought from EPHI and which family member receives a higher benefits
+%or has greater access to resources. Providing EPHI to families often
+%carries more influence in family decision-making.}
+\par
+The principal interest of this paper is to investigate how husband
+and wife behave strategically regarding their EPHI access decisions.
+While other beneficial job characteristics such as sick pay or
+pension plan may also affect their labor force participation
+decisions, this study controls the impact from these determinants
+using various econometric methods.  Besides, this study assumes that
+EPHI is always offered with jobs, and players either accept or
+reject this offer. This assumption is based on the observation that,
+while an EPHI offer is contingent on the individual job search
+outcomes, empirical analysis estimates an average effect of personal
+EPHI access on spousal choice across every possible outcome among
+individuals and time periods.\footnote{The modelling strategy
+assumes that jobs with EPHI are always supplied and, hence whether
+someone takes up such a job is simply a matter of personal and/or
+family preferences.} Players in this framework therefore act like
+representative agents who possess the freedom to choose between
+accept or reject the EPHI offer. This static setting stresses the
+strategic interactions between husband and wife regarding their EPHI
+access, but not the dynamic aspects of their job searching behavior.
+On the contrary, Dey and Flinn (2005, 2008) focused on the effect of
+EPHI access on husband's and wife's job search and wage bargaining
+behaviors, where individual job characteristics and health insurance
+status are jointly determined as functions of the underlying labor
+market environment.
+\par
+This study models this research question using the cooperative-game framework proposed by Bresnahan and Reiss (1991, henceafter BR). In their paper, BR shows how a simple cooperative game structure provides the economic rationale behind the dummy endogenous variable model in econometrics. Specifically, BR models husband's and wife's labor force participation decisions as a cooperative game played within household, because this discrete participation decision of each spouse affects the decision of the other spouse. Naturally, various decisions within household are made jointly by husband and wife, including their choice to find a job with EPHI access. BR's model not only provides the framework to analyze this type of household joint decisions, the cooperative game structure also stresses the joint nature of this type of decisions.
+\par
+
+This is the first study to apply BR's cooperative-game framework to
+investigate household joint decisions.\footnote{Most of the related studies apply BR's
+simultaneous-game framework to study firm's market entry decision. For example, see the survey by Reiss and Wolak (2007).} Specifically, this study applies BR's approach by
+modeling the household health insurance joint decision process as a cooperative game between husband and wife. This
+empirical
+ framework assumes that husband and wife choose their
+ optimal strategy of EPHI access based on the
+ household joint utility generated by their actions,
+ and whether an individual acquires personal EPHI access
+  depends on their own, and the spouses' utilities of
+  being the health insurance provider for the family. Under
+  these settings, the optimal EPHI access within a
+  household generates the highest joint utility for the family.
+  This study estimates the
+  threshold conditions for families to choose among none,
+  single, or dual EPHI access within household, providing an explanation
+  as to why families choose different
+  numbers of EPHI access.
+\par
+
+Researchers have studied the effects of spouse's EPHI access on
+labor market outcomes from various perspectives. For example, some
+studies examine the relationship between husbands' health insurance
+and their spouses' hours of work (Buchmueller and Valletta, 1998;
+Olson, 1998; Wellington and Cobb-Clark, 2000; Schone and Vistnes,
+2001; Bhargavan, 2000). While these studies find that the husband's
+health insurance from work has significant negative effects on the
+wife's labor involvement, most of these studies do not consider the
+joint decision making at the household level, and assume the
+husband's health insurance is exogenous to the wife's labor force
+participation decision.\footnote{See Currie and Madrian (1999) and
+Gruber (2000) for a comprehensive discussion of these studies.}
+Other studies consider the spouse's health insurance access as
+endogenous and instrument this access based on either spouse's job
+characteristics (Schone and Vistnes, 2001), or spouse's human
+capital characteristics (Olson, 2000; Honig and Dushi, 2005; Royalty
+and Abraham, 2006). These job or human capital characteristics might
+be appropriate instruments only for the unobserved heterogeneity in
+cross section data. However, they may not provide enough variation
+to capture time-varying endogenous variables in panel data models,
+such as the spousal EPHI access. Weak instrument variables (IV) may
+produce a bias on the estimates that only include time invariant
+variables as IVs in panel data models.\footnote{The connection
+between these unobserved factors and an individual's job or human
+capital characteristics is readily apparent. Royalty and Abraham
+(2006) noted that since many labor market outcomes depend on
+household income, it is important to include reported household or
+individual income to capture income effects on these labor market
+outcomes. If these measures of income are misreported or imperfectly
+measured, it will be difficult to obtain valid measures of these
+quantities. This measurement error problem also generate bias in
+instrument variable (IV) estimates that use spouse's job or human
+capital characteristics as instruments for spouse's EPHI access.}
+\par
+
+To address the above econometric concerns, this study applies an
+empirical framework to the data from Medical Expenditure Panel
+Survey (MEPS) Panel 10 household component. The panel structure of
+this data makes it possible to control for time invariant unobserved
+effects within household, eliminating the permanent unobserved
+effects. This econometric model also allows the possibility that
+spousal EPHI access is endogenous to personal EPHI access.  The IV
+method is then applied to reduce the endogeneity bias induced by
+transitory unobserved effects, where two types of instruments are
+used: spouse's human capital characteristics, such as age and
+education; and spouse's firm characteristics, such as industry group
+and firm size.
+\par
+
+Empirical results indicate that spousal EPHI access is negatively
+related to personal EPHI access. An individual is five
+ to six percent less likely to have EPHI access if
+ his/her spouse already has EPHI. These estimates imply that
+  husband's and wife's EPHI access does not complement each
+   other due to their bargaining power conflicts, and
+households on average prefer single EPHI access to dual access.
+Since the household utility generated from dual EPHI access is equal
+to the sum of individual gains from EPHI access plus the conflicting
+loss to the family, the estimates suggest that the conflicting loss
+of dual EPHI access is bigger than the gains. This implication is
+further supported by empirical results using household income share
+as a proxy of individual indirect utility. In particular, estimates
+show that, while having spouse's EPHI access reduces both husband
+and wife's preferences to having own EPHI access, the husband's
+disutility from having spousal EPHI access is greater than that of
+the wife. These estimates suggest a more traditional spousal
+relationship
+ is prevalent
+where husbands have more bargaining power in the family.
+Specifically, while the husband's access to EPHI does not greatly
+change the original power balance within household, the wive's
+access to EPHI significantly alters the balance. This increases the
+incentive for husband to choose a job with EPHI offer to maintain
+his position in the family. Therefore, all else being equal, having
+the husband as the sole EPHI provider for the family brings the
+maximum joint utility to households among all possible scenarios.
+\par
+
+The following section illustrates household EPHI decisions using a
+simultaneous, cooperative game model. Section \ref{section3}
+describes the MEPS data analyzed in this study, while Section
+\ref{section4} proposes the empirical models estimating the effects
+of EPHI access. Section \ref{section5} presents the empirical
+results, and Section \ref{section6} concludes the paper.
+\par
+
+\section{Conceptual Framework}\label{section2}
+
+This section constructs a cooperative game framework for empirical
+estimation following BR's paper. Players are considered to cooperate
+with each other by maximizing their joint utility under perfect
+information assumption. Players play the game once and
+simultaneously make their decisions. This setting is suitable for
+current study because of our data characteristics. Specifically,
+players do not play the game repeatedly due to the data's short
+span. The data also provides no information on the sequence of
+choices made by husband and wife. While the analysis would be biased
+by imposing wrong assumptions on the sequence of decisions,
+simultaneous-move assumption is appropriate because of our focus on
+average effects. Similarly, the strategies of husband and wife are
+assumed to include either to accept or to reject their EPHI offer.
+As mentioned in Section \ref{section1}, while this choice is
+contingent on the job search outcome, empirical analysis allows the
+framework to simplify this choice by controlling the effects from
+other determinants, and estimating the average effect across
+individuals and time periods. Consequently, players in this
+framework are considered as accept the EPHI offer if he/she is
+observed to have an EPHI offer in the data; and individuals who are
+either unemployed or employed without EPHI offer are treated as
+reject the offer.
+\par
+Denote the utility functions of husband and wife by $\text{U}^{h}$
+and $\text{U}^{w}$, respectively, and let $a^{k}=0$ indicate the
+person chose to reject EPHI access, and $a^{k}=1$ otherwise, where
+$k=h,w$. Since each member's utility in the household depends on
+joint EPHI decisions, this study assumes that
+$\text{U}^{h}=\text{U}^{h}(a^{i},a^{j},Z)$ and
+$\text{U}^{w}=\text{U}^{w}(a^{i},a^{j},Z)$, where $Z$ represents
+some characteristics of the household members and market
+outcomes.\footnote{The $Z$ describes all attributes in the labor
+market equilibrium other than household EPHI access decisions.}
+Household members then choose the optimal solution, $a^{h}$ and
+$a^{w}$, by maximizing the sum of their joint utility functions,
+$W(a^{i},a^{j},Z)$=$\text{U}^{h}$+$\text{U}^{w}$, subject to the
+household budget constraint.\footnote{This model can be considered
+as a special model for family bargaining games (Kooreman and
+Wunderink, 1997):
+\begin{align}
+&\max\limits_{a^{i},a^{j}} W(U^{h}(a^{i},a^{j},Z),U^{w}(a^{i},a^{j},Z))\label{family_utility}\\[-8pt]
+&\text{s.t.}U^{h}(a^{i},a^{j},Z)\geq T^{h}(a^{i},Z)\notag\\[-8pt]
+&\hspace{1mm}\quad U^{w}(a^{i},a^{j},Z)\geq T^{w}(a^{j},Z).\notag
+\end{align}
+where $T^{k}$ is the threat point of the agent obtained in the case
+of a noncooperative Nash equilibrium. The Nash bargaining model uses
+the household utility function, $N \equiv (U^{h}(a_{h},a_{w},Z)-
+T^{h}(a_{h},Z))(U^{w}(a_{w},a_{h},Z)-T^{w}(a_{w},Z))$, but this
+study adopts an additive separate utility function for estimation purpose.}
+Similar to BR's approach, this study solves husband's and wife's
+choices as reduced-form functions of $Z$, depending upon whether the
+household members have no EPHI access, single access, or dual
+access. Substituting those choice functions in the individual utility
+functions yields the following indirect utility functions for
+husband and wife:
+\begin{align}
+\text{U}^{h}&= \overline{\text{U}}^{h}+\text{a}^{h}\Delta_{1}^{h}+\text{a}^{w}\Delta_{2}^{h}+\text{a}^{h}\text{a}^{w}\Delta_{3}^{h}\label{indirect_1}\\
+\text{U}^{w}&=
+\overline{\text{U}}^{w}+\text{a}^{w}\Delta_{1}^{w}+\text{a}^{h}\Delta_{2}^{w}+\text{a}^{w}\text{a}^{h}\Delta_{3}^{w}.\label{indirect_2}
+\end{align}
+
+In the equations above, $\overline{\text{U}}^{k}$ denotes the
+individual $k$'s utility when neither husband nor wife has EPHI
+access. It captures the proportion of their indirect utilities that are measured by observable personal characteristics such as age and education, which represents the individual threat point in a family bargaining game mentioned above. $\Delta_{1}^{k}$ denotes the change of individual $k$'s
+utility when $k$ becomes the sole EPHI provider for the family. It measures how much the individual $k$'s threat point is lifted with EPHI access, and therefore his/her bargaining power at home. $\Delta_{2}^{k}$, on the contrary, measures how spousal EPHI access affects personal indirect utility thus bargaining power at home. Spousal EPHI access reduces personal indirect utility and bargaining power because the family member who provides the health insurance coverage for the family has a greater say.\footnote{For example, spousal EPHI access affects the division of family chores. Since jobs with EPHI offer are often more demanding, $\Delta_{2}^{k}$ measures the individual marginal (dis)utility from sharing more family chores.} $\Delta_{3}^{k}$ measures the individual utility change when
+both husband and wife have EPHI access. Since it is impossible to raise the bargaining power of husband and wife simultaneously, there are some conflicts of power in a family with dual EPHI access.\footnote{Dey and Flinn (2008) argued that there is an option value of personal EPHI access even when spousal EPHI access is offered. For example, there is a risk that spouse may lose his/her job in the future. The framework proposed here does not capture that effect due to the static setting. However, this framework allows us to estimate the strategic interactions between husband and wife.}
+Therefore, the signs and magnitudes of the $\Delta^{k}$'s
+identify the effects of personal and spousal EPHI access on
+individual $k$'s preferences to find a job with EPHI access. It is expected that $\Delta_{1}^{k}$ is positive while $\Delta_{2}^{k}$ and $\Delta_{3}^{k}$ are negative.
+\par
+Given a vector of household characteristics and market outcomes $Z$,
+there are four total payoffs of husband and wife in this cooperative
+game, $W(a^{h},a^{w})$, conditional on own and spouse's EPHI access:
+\begin{eqnarray}
+W(0,0)& = &\overline{\text{U}}^{h}+\overline{\text{U}}^{w}  \\
+W(1,0)& = &\overline{\text{U}}^{h}+\overline{\text{U}}^{w}+\Delta^{h}_{1}+\Delta^{w}_{2} \\
+W(0,1)&  = &\overline{\text{U}}^{h}+\overline{\text{U}}^{w}+\Delta^{w}_{1}+\Delta^{h}_{2} \\
+W(1,1)&  = &\overline{\text{U}}^{h}+\overline{\text{U}}^{w}+\Delta^{h}_{1}+\Delta^{h}_{2}+\Delta^{h}_{3}+\Delta^{w}_{1}+\Delta^{w}_{2}+\Delta^{w}_{3}.
+\end{eqnarray}
+\par
+
+Individual then chooses between rejecting or accepting EPHI offer by
+maximizing total payoff of the family. For example, conditional on
+wife's EPHI access, husband chooses a job with EPHI when $W(1,0)$ is
+greater than
+ $W(0,0)$, and when $W(1,1)$ is greater than $W(0,1)$. Consequently, husband's and wife's decision rule can be summarized as follows:
+\begin{align}
+\text{a}^{h}&= 1[\Delta_{1}^{h}+\Delta_{2}^{w}+\text{a}^{w}(\Delta_{3}^{h}+\Delta_{3}^{w})\geq 0]\label{oya_1}\\
+\text{a}^{w}&= 1[\Delta_{1}^{w}+\Delta_{2}^{h}+\text{a}^{h}(\Delta_{3}^{h}+\Delta_{3}^{w})\geq 0]\label{oya_2}.
+\end{align}
+\par
+
+ Following BR's approach,
+this study treats $\Delta_{3}^{k}$+$\Delta_{3}^{l}$ as constants
+  (i.e., invariant across households) and
+   $\Delta_{1}^{k}+\Delta_{2}^{l}$ as random variables
+   that vary across households, where $k\neq l$.
+Assume that
+   $\Delta_{1}^{h}+\Delta_{2}^{w}$ is a linear function
+   of observables and individual heterogeneity,
+   $\Delta_{1}^{h}+\Delta_{2}^{w}=X^{k}\beta^{k}+\eta^{k}_{i}-u^{k}$, which implies that the incremental utility for
+   household with only one EPHI access can be explained by the holder $k$'s observable characteristics and
+   some unobservables that vary between different households.
+
+   The
+        structural equations determining the equilibria
+        of this game therefore can be
+        formulated as follows:
+\begin{align}
+\text{a}^{h}&= 1[X^{h}\beta^{h}+\text{a}^{w}(\Delta_{3}^{h}+\Delta_{3}^{w})+\eta_{i}-v^{h}\geq 0]\label{offer_1}\\
+\text{a}^{w}&=
+1[X^{w}\beta^{w}+\text{a}^{h}(\Delta_{3}^{h}+\Delta_{3}^{w})+\eta_{i}-v^{w}\geq
+0].\label{offer_2}
+\end{align}
+\par
+As mentioned in BR's paper, this framework identifies only
+ the household joint preferences for EPHI access,
+ $\Delta_{3}^{k}$+$\Delta_{3}^{l}$. Individual preferences
+  for spouse's EPHI access, such as $\Delta_{2}^{k}$ and
+  $\Delta_{3}^{k}$, cannot be separately determined under this framework.
+  This is because husband's and wife's indirect utilities
+  in this setting are unobserved and function as latent variables behind the binary choices to be estimated.
+While $X^{h}$ and $X^{w}$ are the vectors of observable variables
+connected to household characteristics and market outcomes,
+$\eta_{i}$ is a time-invariant unobservable variable which may be
+correlated with $X^{h}$ and $X^{w}$. If $X^{h}$ and $X^{w}$ include
+individual's employment status, job tenure, wage, fringe benefits
+such as pension plan, age, education, race and health status, there
+may exist some tradeoff or correlation between these variables and
+EPHI access. The inclusion of the unobserved heterogeneity
+$\eta_{i}$ may break the possible correlation between $X^{h}$ and
+$X^{w}$ and the unobserved error term. We argue that after
+controlling for the unobserved individual heterogeneity, $X^{h}$ and
+$X^{w}$ become exogenous. The econometric models section below
+applies the household income share as a proxy for indirect utility,
+making it possible to directly estimate the individual
+   preferences for personal and spousal EPHI access.
+
+\section{Data}\label{section3}
+
+This study uses data from the Medical Expenditure Panel Survey
+(MEPS) Panel 10 household component to test the proposed model. The
+MEPS-HC collects detailed information from each household, including
+individual demographic characteristics, health conditions, use of
+medical services, health insurance coverage, income, and employment
+characteristics. Each household was observed in five rounds of
+interviews each year for two years (2005-2006), which makes it
+possible to investigate household joint decisions using the panel
+data methods.
+\par
+
+The household sampling criteria adopted in this study is a married
+couple in which both husband and wife are aged between 20 and 64,
+and at least one of them is employed during the survey period.
+Individuals in the armed forces, disabled, or self-employed were
+excluded from the sample. A total of 1384 observations satisfied
+these criteria. This study classifies the households into four
+groups based on EPHI status: households in which both husband and
+wife have EPHI access; households in which only the husband has
+access; households in which only the wife has access; and households
+with no EPHI access. Table 1 defines the variables used in this
+paper, and Table 2 presents the descriptive statistics for each
+group based on their personal income, human capital, job, family
+characteristics, and geographic distributions.
+\par
+
+\begin{center}
+[Table 1 and 2 inserts here.]
+\end{center}
+
+The summary statistics provide some preliminary information about
+family members' characteristics and EPHI access. While households
+without EPHI access have the lowest average personal income among
+all groups, husbands or wives with the highest income levels among
+all groups are the sole providers of EPHI for their families. This
+suggests a positive relationship between personal income and EPHI
+access. In addition, while the difference between wife's average
+income share from families with dual EPHI access versus families
+with only her EPHI access is -.106 (.476-.582), the difference
+between husband's average income share from families with dual EPHI
+access versus families with only the husband's EPHI access is -.232
+(.524-.756). These statistics may suggest that husbands generally
+have stronger preferences for being the sole EPHI provider than
+wives. However, it is also likely that husband's higher educational
+levels, also shown in Table 2, probably point to better labor market
+opportunities.\footnote{The same observation may also be generated
+by a framework that allows for a labor market search environment
+where men have a lower exogenous layoff rates than women.}
+Therefore, more empirical works are required to study these
+possible explanations.
+\par
+
+Table 2 summarizes the human capital characteristics within each
+group.
+In addition, husbands and wives in households with dual EPHI access have
+the highest average education level among four groups, while
+husbands and wives in households with only the wife's EPHI access
+are the oldest on average. These observations suggest that age and
+education may be correlated with family health insurance decisions.
+This study also sets a health indicator that equals one if an
+individual reports his/her health status as very good or
+excellent.\footnote{The perceived health status variable in the MEPS
+have five categories: excellent, very good, good, fair, and poor.}
+Households with dual EPHI access have the highest percentage of
+healthy couples, while households without EPHI access have the
+lowest percentage of healthy couples. These statistics suggest a
+positive relationship between family's health insurance decisions
+and household members' health status.
+\par
+
+Table 2 also reveals the job characteristics of household members in
+each group. In households with only one spouse's EPHI access, about
+70 per cent of the husbands are employed while only 47 per cent of
+the wives are employed. These statistics suggest that there may be
+significant differences between husband's and wife's labor supply
+decisions when their spouses possess the EPHI access. In addition,
+couples in households with dual EPHI access have the longest job
+tenure among all groups on average. Husbands and wives have the
+highest hourly wage in households where they are the sole EPHI
+provider, with more fringe benefits including pension plan and sick
+pay. These statistics imply that EPHI access may serve as a good job
+characteristic for husbands and wives.\footnote{In our estimation,
+job characteristics such as tenure, wage, pension plan, and sick pay
+are included to control the association between the EPHI offer and
+"good jobs". Our estimation reflects a different pathway of joint
+EPHI decisions other than "good jobs".}
+\par
+
+Finally, Table 2 also indicates that households with dual EPHI access
+have the fewest number of children among all groups, while
+households with no access to EPHI have the most children. Households
+with only the husband's EPHI access also have more children than
+households with only the wife's EPHI access.
+These statistics provide a primitive evidence supporting the
+negative relationship between spousal EPHI access and the amount of
+housework and child caring activities.
+These statistics also contradict the wives' employment rates in the sample,
+which suggest that women may give up employment to take care of
+children and re-enter employment after their children grow up. This
+life-cycle interpretation is plausible because wives are older in
+the groups with only the wife's EPHI access.
+\par
+
+\section{Econometric Models}\label{section4}
+This section proposes an econometric model to estimate the household
+preferences for the EPHI access, based on the cooperative game
+framework discussed in the Section 2. The proposed econometric model
+first estimates how spouse's access to EPHI affects own access to
+EPHI in Eq. (\ref{offer_1}) \& (\ref{offer_2}).  Since the EPHI
+access decision is a binary choice, a bivariate probit model is an
+appropriate approach for estimating Eq. (\ref{offer_1}) \&
+(\ref{offer_2}). To estimate the individual preference for household
+EPHI access, the proposed econometric model uses household income
+share as a proxy for husband's and wife's indirect utility in Eq.
+(\ref{indirect_1}) \& (\ref{indirect_2}). This model considers the
+potential endogenous problem between personal and spousal EPHI
+access and income share because EPHI access may be correlated with a
+variety of individual and job characteristics. This econometric
+model takes advantage of the panel data structure of the MEPS by
+allowing unobserved, time-invariant heterogeneity within households.
+
+\subsection{Household Preferences for Employer-Provided Health Insurance Access}\label{section4_1}
+
+The key issue in estimating the effects of spousal EPHI access on
+personal access in Eq. (\ref{offer_1}) and (\ref{offer_2}) is to
+allow the access of both husband and wife to be endogenous. The
+outcome of EPHI access is a binary response that reflects whether an
+individual is seeking a job with this fringe benefit. This study
+uses a bivariate probit model to account for unobserved
+heterogeneity and endogeneity under the panel data
+setting.\footnote{A detailed discussion of the models appears in
+Sections 15.7.3 and 15.8.5 in Wooldridge (2010).} The proposed
+econometric model for Eq. (\ref{offer_1}) and (\ref{offer_2}) is
+\begin{align}
+\text{EPHI}_{it}&= 1[\textbf{x}_{it1}'\delta_{1}+\delta_{S}\text{SEPHI}_{it}+\eta_{i1}+ v_{it1}>0],\label{biprobit_11}\\ %\qquad
+\text{SEPHI}_{it}&= 1[\textbf{x}_{it}'\delta_{2}+\eta_{i2}+ v_{it2}>0],\label{biprobit_12} %\qquad
+\end{align}
+with
+\begin{align}
+v_{it1}&\Big|\textbf{x}_{it1},\text{SEPHI}_{it},\eta_{i1}\sim\text{Normal(0,1)},\\
+v_{it2}&\Big|\textbf{x}_{it},\eta_{i2}\sim\text{Normal(0,1)}.
+\end{align}
+In the model above , $1[\cdot]$ is an indicator function;
+$\textbf{x}_{it}=(\textbf{x}_{it1},\textbf{x}_{it2})$, where
+$\textbf{x}_{it1}$ is a vector of control variables that may affect
+health insurance offer, and $\textbf{x}_{it2}$ is a set of exogenous
+variables that relate to personal but not spousal EPHI access; and
+$\eta_{i}=(\eta_{i1},\eta_{i2})$ captures the effects of unobserved
+factors or omitted time-constant variable. Both $\text{EPHI}_{it}$
+and $\text{SEPHI}_{it}$ are binary outcomes that indicate whether an
+individual $i$ and his/her spouse has EPHI access, respectively.
+Moreover, holding other factors fixed, $\delta_{S}$ in Eq.
+(\ref{biprobit_11}) measures $\Delta_{3}^{h}+\Delta_{3}^{w}$ in Eq.
+(\ref{offer_1}) and (\ref{offer_2}), which captures the effects of
+spousal EPHI access on personal EPHI access. Since
+$\text{SEPHI}_{it}$ is a potential endogenous variable, this study
+instruments the variable by including $\textbf{x}_{it2}$ in Eq.
+(\ref{biprobit_12}). While parameter $\delta_{S}$ in this bivariate
+probit model only provides information about whether
+$\text{SEPHI}_{it}$ has a positive or negative effect on
+$\text{EPHI}_{it}$, this study estimates the average partial effect
+(APE) to capture the magnitude of this effect.
+\par
+
+Since there may be possible correlation between $\textbf{x}_{it1}$
+and $\eta_{i}$, this study adopts the correlated random effect
+approach in Chamberlain (1982, 1984) and replaces $\eta_{i1}$ and
+$\eta_{i2}$ with their linear projections onto the explanatory
+variables in all time periods. Let
+$\textbf{x}_{i}=(\textbf{x}_{i1},...,\textbf{x}_{iT})'$ , where
+$\bar{\textbf{x}}_{i}$ contains the time averages of all strictly
+exogenous variables. The correlated random effect modeling of
+$\eta_{i}$ is shown as follows:
+\begin{align}
+\eta_{i1}|\textbf{x}_{i}&=\psi_{10}+\psi_{11}\bar{x}_{i1}
++\psi_{12}\bar{x}_{i2}+ ...+\psi_{1K}\bar{x}_{iK}+a_{i1}\equiv\bar{\textbf{x}}_{i}'\psi_{1}+a_{i1},\\
+\eta_{i2}|\textbf{x}_{i}&=\psi_{20}+\psi_{21}\bar{x}_{i1}
++\psi_{22}\bar{x}_{i2}+
+...+\psi_{2K}\bar{x}_{iK}+a_{i2}\equiv\bar{\textbf{x}}_{i}'\psi_{2}+a_{i2}.
+\end{align}
+Plugging these equations into Eq. (\ref{biprobit_11}) and
+(\ref{biprobit_12}) leads to the following equations,
+\begin{align}
+\text{EPHI}_{it}&= 1[\textbf{x}_{it1}'\delta_{1}+\delta_{S}\text{SEPHI}_{it}+\bar{\textbf{x}}_{i}'\psi_{1}+a_{i1}+ v_{it1}>0],\label{biprobit_13}\\ %\qquad
+\text{SEPHI}_{it}&= 1[\textbf{x}_{it}'\delta_{2}+\bar{\textbf{x}}_{i}'\psi_{2}+a_{i2}+ v_{it2}>0].\label{biprobit_14} %\qquad
+\end{align}
+To apply the bivariate probit model, standardize $a_{i1}+ v_{it1}$
+and $a_{i2}+ v_{it2}$ as a standard normal distribution, and set
+$e_{itj}=(a_{ij}+ v_{itj})/(1+\sigma^{2}_{a_{ij}})^{1/2}$ for
+$j=1,2$, where each $e_{itj}$ has a standard normal distribution
+conditional on $\textbf{x}_{i}$. Equations (\ref{biprobit_13}) and
+(\ref{biprobit_14}) therefore become
+\begin{align}
+\text{EPHI}_{it}&= 1[\textbf{x}_{it1}'\delta_{1a}+\delta_{Sa}\text{SEPHI}_{it}+\bar{\textbf{x}}_{i}'\psi_{1a}+e_{it1}>0],\label{biprobit_15}\\ %\qquad
+\text{SEPHI}_{it}&= 1[\textbf{x}_{it}'\delta_{2a}+\bar{\textbf{x}}_{i}'\psi_{2a}+e_{it2}>0],\label{biprobit_16} %\qquad
+\end{align}
+where the subscript $a$ denotes the standardized parameters. The
+joint error term, $e_{it}\equiv(e_{it1},e_{it2})$, is assumed to be
+independent of $\textbf{x}_{it}$, $\bar{\textbf{x}}_{i}$, and
+$\text{SEPHI}_{it}$. Equations (\ref{biprobit_15}) and
+(\ref{biprobit_16}) thus satisfy the formulation of a bivariate
+probit model, and the log-likelihood function can be easily
+constructed using the cumulative bivariate normal distribution
+function, $\Phi_{2}\sim\text{Normal(0,$\Sigma$)}$, where $\Sigma$ is
+the variance and covariance matrix of $e_{it}$. These scaled
+parameters can be consistently estimated using the MLE method.
+Finally, assume that $\hat{\delta}_{1a}$, $\hat{\delta}_{Sa}$, and
+$\hat{\psi}_{1a}$ are coefficients estimated from the MLE method,
+the APE of spouse's EPHI access on own access is
+\begin{align}
+\Phi[\textbf{x}_{it1}'\hat{\delta}_{1a}+\hat{\delta}_{Sa}+\bar{\textbf{x}}_{i}'\hat{\psi}_{1a}]-\Phi[\textbf{x}_{it1}'\hat{\delta}_{1a}+\bar{\textbf{x}}_{i}'\hat{\psi}_{1a}],
+\end{align}
+where $\Phi$ is the standard normal CDF.
+
+\subsection{Individual Preference for Employer-Provided Health Insurance Access}\label{section4_2}
+As discussed previously, more information is required to estimate
+individual preference for spouse's EPHI access, namely
+$\Delta_{2}^{k}$ and $\Delta_{3}^{k}$ in the  Eq. (\ref{indirect_1})
+\& (\ref{indirect_2}). Since the sample database here does not
+contain a direct measure of household member's indirect utility this
+study considers income share as a proxy for the estimation. This is
+a suitable proxy because husband's and wife's utilities depends on
+their relative control over resources, which is widely considered as
+the source of family bargaining power (for example, Lundberg and
+Pollak, 1996). Since the purpose of this study is to investigate the
+individual choices of EPHI access at the household level, the
+household income share provides a measure of how the spouse's EPHI
+access affects the household member's relative control over
+resources.
+\par
+
+Consider Eq. (\ref{indirect_1}) \&
+(\ref{indirect_2}) with linear unobserved effects: for a
+randomly drawn cross section observation $i$,
+\begin{align}
+\text{U}^{k}_{it}&=
+\overline{\text{U}}^{k}_{it}+\delta_{1}^{k}\text{EPHI}_{it}+\delta_{2}^{k}\text{SEPHI}_{it}
++\delta_{3}^{k}\text{EPHI}_{it}\times\text{SEPHI}_{it}+\eta_{i}\label{model_BP},
+\end{align}
+where $\text{EPHI}_{it}$ and $\text{SEPHI}_{it}$ are binary
+variables indicating whether an individual and the individual's
+spouse have EPHI access at period $t$, respectively. The term
+$\eta_{i}$ is an unobserved heterogeneity that influences EPHI
+decisions, such as ability. Similar to the model in Section 2,
+$\overline{\text{U}}^{k}_{it}$ denotes the individual $k$'s utility
+when neither husband nor wife has EPHI access; $\delta^{k}_{1}$
+measures the incremental utility of individual $k$ when he/she
+acquires EPHI access; $\delta^{k}_{2}$ measures the incremental
+utility for individual $k$ with spousal EPHI access, and
+$\delta^{k}_{3}$ measures the utility change when both husband and
+wife have EPHI access. To incorporate this theoretical framework
+into the proposed econometric model, this study considers the income
+share of individual $i$ with sex $k$ at period $t$,
+$\text{IS}^{k}_{it}$, as a proxy for person $i$'s indirect utility.
+Let $\text{U}^{k}_{it}=\text{IS}^{k}_{it}-u_{it}^{k}$, where
+$u^{k}_{it}$ accounts for the proportion of utility that is not
+captured by individual $i$'s income share in a linear fashion.
+Substituting this equation into Eq.(\ref{model_BP}) yields
+\begin{align}
+\text{IS}^{k}_{it}&=
+\overline{\text{U}}^{k}_{it}+\delta_{1}^{k}\text{EPHI}_{it}+\delta_{2}^{k}\text{SEPHI}_{it}
++\delta_{3}^{k}\text{EPHI}_{it}\times\text{SEPHI}_{it}+\eta_{i}+u_{it}^{k}.\label{model_BP_1}
+\end{align}
+Assume $\overline{\text{U}}^{k}_{it} $ can be explained by a list of
+observed individual characteristics, $X_{it}$, and the idiosyncratic
+error, $v_{it}^{k}$, such that
+$\overline{\text{U}}^{k}_{it}=X^{k}_{it}\beta^{k}+v_{it}^{k}$,
+%%%%%
+Eq. (\ref{model_BP_1}) becomes
+\begin{align}
+  \text{IS}_{it}^{k}&=X^{k}_{it}\beta^{k}+\delta_{1}^{k}\text{EPHI}_{it}+\delta_{2}^{k}\text{SEPHI}_{it}
++\delta_{3}^{k}\text{EPHI}_{it}\times\text{SEPHI}_{it}+\eta_{i}+\varepsilon_{it}^{k},\label{model_13}
+\end{align}
+where $\varepsilon_{it}^{k}=(u_{it}^{k}+v_{it}^{k})$. Since both
+personal and spousal EPHI access may be affected by some unobserved
+factors in $\varepsilon_{it}^{k}$, such as time-varying health
+insurance premium, this regression consist of three potential
+endogenous variables, $\text{EPHI}_{it}$, $\text{SEPHI}_{it}$, and
+$\text{EPHI}_{it}\times\text{SEPHI}_{it}$. Estimation will be biased
+using the same set of IVs to estimate the coefficients of these
+variables simultaneously. The IV approach seems straightforward in
+the first but using the same set of IVs to address the endogeneity
+problem may generate a bias estimation. The estimation strategy in
+this study is to estimate the coefficients of Eq. (\ref{model_13})
+using observations conditional on whether individual $i$ has EPHI
+access. Specifically, we estimate Eq. (\ref{model_13}) using two
+subsamples, say, subsample (1) and subsample (2). The individual $i$
+in subsample (1) has no EPHI access ($\text{EPHI}_{it}=0$), while
+individual $i$ in subsample (2) has EPHI access
+($\text{EPHI}_{it}=1)$. Restricted to subsample (1) and subsample
+(2), Eq. (21) becomes
+\begin{align}
+  \text{IS}_{it}^{k}&=X^{k}_{it}\beta_{0}^{k}+\delta_{2}^{k}\text{SEPHI}_{it}
++\eta_{i0}+\varepsilon_{it0},
+\label{model_is1}\\
+  \text{IS}_{it}^{k}&=X^{k}_{it}\beta_{1}^{k}+\delta_{1}^{k}+(\delta_{2}^{k}
++\delta_{3}^{k})\text{SEPHI}_{it}+\eta_{i1}+\varepsilon_{it1},
+\label{model_is2}
+\end{align}
+where $\beta_{0}^{k}$ and $\beta_{1}^{k}$ are coefficients to be
+estimated using subsamples (1) and (2), respectively. $\eta_{ij}$
+and $\varepsilon_{itj}$, where $j=0,1$, stand for unobserved
+time-invariant effects and disturbance of the income share
+$\text{IS}_{it}^{k}$ in these subsamples. Notice this strategy
+deliberately fixes the effect of the individual $i$' EPHI access and
+allows the movement of spouse's EPHI decisions, $\text{SEPHI}_{it}$,
+to be endogenous in both Eq. (\ref{model_is1}) and Eq.
+(\ref{model_is2}). Using the IV estimation, we can thus obtain the
+consistent estimates of $\delta^{k}_{2}$ in Eq. (\ref{model_is1})
+and $\delta^{k}_{2}$+$\delta^{k}_{3}$ in Eq. (\ref{model_is2}).
+However, this strategy is unable to identify  $\delta_{1}^{k}$
+because we do not address the endogeneity problem of
+$\text{EPHI}_{it}$, and $\delta_{1}^{k}$ is non-separable from the
+constant term in $X^{k}_{it}$ in Eq. (\ref{model_is2}).
+%%%%%
+\par
+
+Since the estimation methods for Eq. (\ref{model_is1}) and
+(\ref{model_is2}) are the same, this study uses Eq.
+(\ref{model_is1}) to illustrate the proposed estimation methodology.
+While the time-constant unobserved effect $\eta_{i}$ might be
+correlated with observed explanatory variables, this study applies
+the fixed effect approach to estimate the parameters consistently.
+The standard fixed-effects approach is to use the time demeaning of
+the original equation to remove the individual specific effect
+$v_{i}$. Denote the time demeaning notation, $\Delta y_{it}\equiv
+y_{it}-\bar{y}$ where $\bar{y}=\frac{1}{T}\sum\limits_{t=1}^{T}
+y_{it}$ and apply this to Eq. (\ref{model_13}),  we can obtain
+\begin{align}\label{fixmodel}
+ \Delta \text{IS}_{it}^{k}&=\Delta X^{k}_{it}\beta_{0}^{k}+\delta_{2}^{k}\Delta \text{SEPHI}_{it}
++\Delta\varepsilon_{it0},\;t=2,...,T.
+\end{align}
+This fixed-effects transformation cannot rule out the possibility
+that $\Delta \text{SEPHI}_{it}$ may still be correlated with $\Delta
+\varepsilon_{it0}$. For example, the existence of a time-varying
+measurement error in $\Delta \varepsilon_{it0}$ that is related to
+$\Delta \text{SEPHI}_{it}$ may still bias the estimates from Eq.
+(\ref{fixmodel}). The idiosyncratic assortative match between labor
+income and employee benefits like EPHI also makes $\Delta
+\text{SEPHI}_{it}$ endogenous. Thus, while the fixed-effects
+transformation can effectively eliminate time-invariant unobserved
+heterogeneity, the proposed model might still generate an incomplete
+solution. To address the issue, this study estimates the equation by
+pooled 2SLS using spouse's human capital characteristics, industry group, and firm size as instruments. This choice of instruments
+was based on the observation that, while spouse's industry group and
+firm size are exogenous to the time-varying unobserved components of
+$\Delta \text{IS}_{it}^{k}$, these features are highly correlated
+with spousal EPHI access. The following section presents more
+details about the IVs.
+
+\section{Results}\label{section5}
+The proposed econometric models address the potential endogenous
+problem between spousal EPHI access and personal EPHI access and
+income share using both the panel data structure and IV methods. As
+mentioned in the Introduction, while most of the research on this
+topic using either spouse's human capital or job characteristics as
+IVs, they might only capture the variation of endogenous variables
+in cross section but not in a panel data framework. In order to
+avoid the weak instruments problem in panel data models, a set of
+instruments should contain both cross section and time dimensional
+variations. Human capital variables such as age, education, etc, are
+used to tackle down cross section variation. Our solution to the
+time dimensional variation is to apply some time-varying job
+characteristics of spouse as additional IVs, including the number of
+employees and the industry category of the establishment. This
+choice of the time-varying instruments is based on the observation
+that spouse's industry group and firm size are exogenous to the
+time-varying unobserved components in Eq. (\ref{biprobit_15}) \&
+(\ref{biprobit_16}) and (\ref{model_is1}) \&
+(\ref{model_is2}).\footnote{Currie and Madrian (1999) and Gruber
+(2000) link corporate status to EPHI offers.} In addition, firms in
+certain industries are more likely to provide EPHI than firms in the
+other industries because governments provide different tax subsidies
+in different industries. Therefore, these job characteristics are
+related to spousal EPHI access but not personal EPHI
+access.\footnote{These IVs pass the specification tests suggested by
+Angrist and Pischke (2009). In addition to the first-stage results,
+both the limited information maximum likelihood estimates and the
+reduced form results indicate that our two-stage least squares
+estimates are not subject to the weak IV problem. These IVs also
+passed the overidentification test. The estimation results are
+available upon request from the authors.}
+\par
+To estimate the effects of spousal EPHI access on personal EPHI
+access and income share, this section applies the empirical method
+introduced in Section \ref{section4} using data from the MEPS. This
+section applies the proposed IVs to examine the effect of spousal
+EPHI access on personal EPHI access, which measures the degree of
+power conflicts between single and dual EPHI access for a family.
+Estimation results show that the effect is negative and
+statistically significant, indicating that household members as a
+unit may prefer single EPHI access to dual EPHI access on average
+due to this conflict. Then, using family income share as a proxy for
+individual indirect utility, this section estimates the utility
+change of husband and wife separately when their spouses possess
+EPHI access. Results show that while both husband's and wife's
+utilities decreased when their spouses acquired EPHI access,
+husbands experienced greater disutility from their spouse's access
+that did the wives. These results suggest that, all else being
+equal, having the husband as the single EPHI provider brings the
+maximum utility to the household on average.
+
+\subsection{Household Preferences for Employer-Provided Health Insurance Access}
+This study investigates the effect of spouse's EPHI access on the
+probability of own access to EPHI by estimating Eq.
+(\ref{biprobit_15}) and (\ref{biprobit_16}) jointly using the pooled
+probit IV estimation presented in the previous section. The control
+variables, $\textbf{x}_{it1}$, consist of personal job
+characteristics (including employment status, job tenure, wage, and
+fringe benefits such as pension plan and sick pay) and personal
+human capital characteristics (including age, education, race, and
+health status). The term $\textbf{x}_{it1}$ also includes the number
+of children in the household younger than 18 years old and regional
+unemployment rate and region dummies. As discussed in Section 4,
+this study controls time-invariant unobserved effects by applying
+Chamberlain's correlated random effect approach, which adds time
+averages of all strictly exogenous variables to the regressions.
+Spousal human capital variables and firm characteristics serve as
+the excluded instruments, $\textbf{x}_{it2}$, to address the
+endogenous problem.
+\par
+
+\begin{center}
+[Table 3 inserts here.]
+\end{center}
+
+Tables 3 presents the results from the pooled probit IV regressions.
+Empirical evidence indicates that spousal EPHI access reduces the
+probability of personal EPHI access. This effect is similar across
+gender because both wive's and husbands' regressions estimate
+$\Delta_{3}^{h}+\Delta_{3}^{w}$ in  Eq. (\ref{offer_1}) \&
+(\ref{offer_2}). These results imply that the husband's and wife's
+EPHI access create some power conflicts, and household members as a
+whole prefer single to dual EPHI access on average. The APE results
+in Table 3 also indicate that an individual is five to six per cent
+less likely to find a job with EPHI access if his/her spouse already
+has EPHI for the family. Our negative estimate of
+$\Delta_{3}^{h}+\Delta_{3}^{w}$ suggests that the family utility
+generated from this action ($\Delta_{1}^{k}$+$\Delta_{2}^{l}$) must
+be sufficiently large for individual $i$ to find a job with EPHI
+access. For example, suppose the husband's bargaining power within
+the household is increased by possessing EPHI access. In this case,
+the husband's indirect utility increases by $\Delta^{h}_{1}$ while
+wife's indirect utility decreases by $\Delta^{w}_{2}$. Now if the
+wife also finds a job with EPHI access, it is an optimal strategy
+only if her incremental indirect utility ($\Delta^{w}_{1}$) covers
+both the loss of husband's incremental disutility ($\Delta^{h}_{2}$)
+and the household joint disutility
+($\Delta^{h}_{3}$+$\Delta^{w}_{3}$). This empirical evidence
+explains why up to 20\% (1404/6920) of the families in the sample
+have dual EPHI access.\par
+
+\subsection{Individual Preference for Employer-Provided Health Insurance Access}
+
+While the empirical results in the previous section show that
+spousal EPHI access is negatively related to personal EPHI access,
+and thus household members as a unit prefers
+ single to dual EPHI access, we were unable to identify
+ the individual utility change due to spousal EPHI
+ access. Therefore, this section uses family income share as
+  a proxy of husband's and wife's indirect utility to
+  estimate how household members' utility change with
+  spouse's EPHI access. This empirical strategy differs
+   from the discrete endogenous variable system
+  estimated in the previous section. Equations (\ref{biprobit_15}) and (\ref{biprobit_16})
+  estimate the discrete choice model by assuming the
+  indirect utility as a latent variable, while Eq.(\ref{model_is1})
+  and (\ref{model_is2}) directly estimate the indirect
+  utility change. Specifically, we consider the total payoffs in Section 2 using the estimates from Eq.(\ref{model_is1}) and (\ref{model_is2}) as follows:
+\begin{eqnarray}
+\widehat{W}(0,0)& = &X^{h}_{0}\widehat{\beta^{h}_{0}}+X^{w}_{0}\widehat{\beta^{w}_{0}}  \\
+\widehat{W}(1,0)& = &X^{h}_{1}\widehat{\beta^{h}_{1}}+X^{w}_{0}\widehat{\beta^{w}_{0}}+\widehat{\delta^{w}_{2}} \\
+\widehat{W}(0,1)&  = &X^{h}_{0}\widehat{\beta^{h}_{0}}+X^{w}_{1}\widehat{\beta^{w}_{1}}+\widehat{\delta^{h}_{2}} \\
+\widehat{W}(1,1)&  = &X^{h}_{1}\widehat{\beta^{h}_{1}}+X^{w}_{1}\widehat{\beta^{w}_{1}}+\widehat{\delta^{h}_{2}}+\widehat{\delta^{w}_{2}}+\widehat{\delta^{h}_{3}}+\widehat{\delta^{w}_{3}}.
+\end{eqnarray}
+
+where the estimates of $\beta^{k}_{0}$ and $\delta^{k}_{2}$ can be identified from Eq. (\ref{model_is1}); and estimates of $\beta^{k}_{1}$ and $\delta^{k}_{3}$ can be identified from Eq. (\ref{model_is2}). The equilibrium conditions of this game are thus as follows:
+\begin{align}
+\text{a}^{h}&= 1[X^{h}_{1}\widehat{\beta^{h}_{1}}-X^{h}_{0}\widehat{\beta^{h}_{0}}+\widehat{\delta^{w}_{2}}+\text{a}^{w}(\widehat{\delta_{3}^{h}}+\widehat{\delta_{3}^{w}})\geq 0]\label{model_IS4}\\
+\text{a}^{w}&=
+1[X^{w}_{1}\widehat{\beta^{w}_{1}}-X^{w}_{0}\widehat{\beta^{w}_{0}}+\widehat{\delta^{h}_{2}}+\text{a}^{h}(\widehat{\delta_{3}^{h}}+\widehat{\delta_{3}^{w}})\geq
+0]\label{model_IS5}.
+\end{align}
+These conditions provide another source of identification for Eq. (\ref{model_13}).  The difference between $X^{k}_{1}\widehat{\beta^{k}_{1}}$ and $X^{k}_{0}\widehat{\beta^{k}_{0}}$ provides an estimate of $\delta^{k}_{1}$ with the assumption that, after controlling the effects from the observables in $ X^{k}_{it} $ and the spouse's EPHI access, personal EPHI access is the only source of variation that explains the difference between the predicted income share of households with and without personal EPHI access. Therefore, Eq. (\ref{model_IS4}) and (\ref{model_IS5}) can
+be regarded as the empirical counterparts of  Eq. (\ref{oya_1}) and
+(\ref{oya_2}).
+\par
+To regress the income share equation Eq. (\ref{model_is1}) and
+(\ref{model_is2}), this study applies the same control variables as those used
+for Eq. (\ref{biprobit_15}) and (\ref{biprobit_16}), and controls the
+time-invariant unobserved effects $v_{i}$ by applying the
+fixed-effects method in Eq. (\ref{fixmodel}). In addition, since
+age, race, and education remained constant during the sample period,
+these variables may not be identified or distinguished from fixed
+effects. Therefore, these variables interact with the round dummies
+to control their effects on the dependent variable, which might
+change over time. Endogenous problem of $\Delta \text{SEPHI}_{it}$ in Eq. (\ref{fixmodel}) is addressed
+by applying the pooled 2SLS method using spouse's human capital
+variables and firm characteristics as the IVs.
+\par
+
+\begin{center}
+[Table 4 inserts here.]
+\end{center}
+
+Table 4 presents the empirical results. As predicted in Section 2,
+spousal access to EPHI reduces both husband's and wife's income
+share regardless of whether personal EPHI is offered. In particular,
+columns (1) and (3) in Table 4 show that, without personal EPHI
+access, the husband's access to EPHI reduces the wife's income share
+by 12\% ($\widehat{\delta^{w}_{2}}$), while the wife's access to
+EPHI reduces the husband's share by 18\%
+($\widehat{\delta^{h}_{2}}$). These estimates suggest that husbands'
+utility decreases more than that of the wife after their spouse
+became the single EPHI provider for the family. These results
+suggest a traditional spousal relationship in which the husbands'
+bargaining power is affected more by the wife's EPHI access than
+vice versa.\footnote{Asymmetric effects across gender also appear in
+Lundberg (1988) and Pencavel (1998), where the effects from spouse's
+employment or human capital decisions on personal labor market
+outcomes are also asymmetrically distributed across gender. Both
+studies explain these results using the family power balance
+explanation. Royalty and Abraham (2006) also found an asymmetric
+effect from spousal EPHI access on personal working hours. They
+argued that while husbands work more when their wives have a good
+job due to positive assortative mating,
+ wives work
+less when their husbands have a good job because the income effect dominates the assortative mating effect for the wives.}
+\par
+
+When the husband or wife has an EPHI offer, columns (2) and (4) in
+Table 4 indicate that the husbands' income share decreases more than
+wives' share after the other spouse obtains EPHI access. As shown in
+Eq. (\ref{model_is1}) and  (\ref{model_is2}), the husband's
+disutility from dual EPHI access ($\widehat{\delta^{h}_{3}}$) is
+-.243, while the wife's disutility from dual EPHI access
+($\widehat{\delta^{w}_{3}}$) is -.055. These results are similar to
+the estimates of the bivariate probit model, where having dual EPHI
+access reduces the household joint utility. Thus, the husband's and
+wife's choice criteria in Eq. (\ref{model_IS4}) and
+(\ref{model_IS5}) become
+\begin{align}
+\text{a}^{h}&= 1[X^{h}_{1}\widehat{\beta^{h}_{1}}-X^{h}_{0}\widehat{\beta^{h}_{0}}-.184-\text{a}^{w}(.298)\geq 0]\\
+\text{a}^{w}&=
+1[X^{w}_{1}\widehat{\beta^{w}_{1}}-X^{w}_{0}\widehat{\beta^{w}_{0}}-.123-\text{a}^{h}(.298)\geq
+0].
+\end{align}
+\par
+
+\begin{center}
+[Figure 1 inserts here.]
+\end{center}
+Figure 1 graphs these interaction effects, where the individual
+utility from holding EPHI is denoted as $\widehat{\delta^{h}_{1}}$
+for the husband and $\widehat{\delta^{w}_{1}}$ for the wife.
+Since
+the wife's EPHI access significantly reduces the husband's indirect
+utility and therefore the joint household utility, more families
+should have the husband as the single EPHI provider. Specifically,
+when the individual utility gain from having EPHI access ($\delta^{k}_{1}$) is too
+small to compensate for the spouse's loss
+($\delta^{k}_{2}$), the optimal strategy is to choose a
+job without EPHI access regardless of whether the spouse has EPHI
+access. In this case, our estimates suggest that the wife's
+threshold level to choose this strategy is higher (.184) than the
+husband's (.123), and wives are therefore more likely to apply this
+strategy. On the other hand, when the individual utility gain from
+having EPHI access is large enough to cover both the spouse's and
+the joint utility loss, the optimal strategy is to choose a job with
+EPHI regardless of spousal EPHI access availability. Our estimates suggest that this strategy is more likely to become the
+husband's dominant strategy, because the husband's threshold level
+(.421) is smaller than the wife's threshold level (.482).
+Consequently, the empirical results explain why 41\% (2806/6920) of
+the families in the sample have the husbands as the single EPHI
+provider. On the other hand, only 15\% (1047/6920) of the families
+in the sample have the wives as the sole EPHI provider.
+\par
+
+
+\section{Conclusion}\label{section6}
+This study provides a new perspective and framework showing why some
+families have single EPHI access while some have dual EPHI access.
+We investigate household preferences for EPHI access using the
+empirical methodology proposed by Bresnahan and Reiss (1991), and
+model the household joint health insurance decision as a
+cooperative, simultaneous game. We estimate the effects of spousal
+EPHI access on personal access, predict how husband and wife make
+their decisions based on household joint utility and family power balance. Results show that
+an average household generally prefers single to dual EPHI access,
+suggesting that the husband's and wife's EPHI access are not
+complementary due to the bargaining power conflicts. Using household
+income share as a proxy for the individual indirect utility, this
+study shows that husbands have greater incentive to acquire EPHI
+access than their wives, because wives' EPHI access decreases the
+husbands' utility more than vice versa. These estimates suggest a
+traditional spousal relationship in which husbands may possess more
+bargaining power in an average household.
+\par
+
+The main challenge of empirical research on this topic comes from
+the endogeneity of EPHI access. The empirical approach in this study
+includes several novel concepts. First, this study uses the panel
+data structure of the MEPS data to eliminate permanent unobserved
+effects, i.e., it applies a fixed-effects transformation to remove
+the unobserved permanent effects of EPHI offers. Second, two types
+of instruments are used in the transformed empirical model of EPHI:
+human capital variables and spouse's firm characteristics.
+\par
+
+This paper highlights an important link between marital gender power
+and EPHI offers. The gender difference in response to spousal EPHI
+access in terms of income share and EPHI access suggests that
+husbands and wives face different opportunity costs in the labor
+market when their spouses already have EPHI access. Therefore,
+husbands and wives behave differently to maximize their personal
+utilities and their family well-being. There are two implications
+from our results: first, as more women obtain EPHI access from their
+labor market outcomes, they may become the sole EPHI provider and
+their marital bargaining power will rise, resulting in greater
+equality in the family. Viewed from this perspective, dual EPHI
+access should be more prevalent in married household in the future.
+Second, since single EPHI access may be sufficient for some
+families, individuals might look for jobs without EHPI access if
+their spouse already has EPHI access. For example, if there is a
+trade-off between wages and EPHI access, some people may try to find
+high-paying jobs without EPHI. However, this situation can also
+create job lock for the sole EPHI provider, and the current system
+of employer-based insurance may produce larger welfare losses.
+\par
+
+\begin{thebibliography}{12}
+
+\bibitem{1} Abraham, J.M., Royalty, A.B., 2005. Does Having Two Earners in the Household Matter for Understanding How
+                Well Employer-Based Health Insurance Works? \emph{Medical Care Research and Review} 62 (2), pp. 167-186.
+
+\bibitem{1} Abraham, J.M., Vogt, W.B., Gaynor, M.S. 2002. Household Demand for Employer-Based Health Insurance, \emph{NBER Working Paper,} W9144.
+
+
+\bibitem{2} Angrist, J., Pischke J., 2009. \emph{Mostly Harmless Econometrics}. Princeton University Press, Princeton, New Jersey.
+
+
+\bibitem{1} Bresnahan T.F. and Reiss, P.C., 1991, Empirical Models of Discrete Games, \emph{Journal of Econometrics} 48, 57-81.
+
+
+%\bibitem{1} Agarwal, B., 1997.
+%                 Bargaining and gender relations: within and beyond the household.
+ %                Feminist Economics 3 (1), 1-51.
+
+
+
+%\bibitem{3} Aura, S., 2005. Does the balance of power within a family matter? The case of the Retirement Equity Act.
+%                  Journal of Public Economics 89 (9-10), 1699-1717.
+
+%\bibitem{4} Basu, K., 2006.
+ %                 Gender and Say: a model of household behaviour with endogenously determined balance of power.
+    %              Economic Journal 116 (511), 558-580.
+
+%\bibitem{5} Becker, G., 1974.
+%                 A theory of social interactions.
+%                 Journal of Political Economy 82 (6), 1063-1094.
+
+%\bibitem{6} Beegle, K., Frankenberg, E., Thomas, D., 2001.
+%                   Bargaining power within couples and use of prenatal and delivery care in Indonesia.
+%                   Studies in Family Planning 32 (2), 130-146.
+
+\bibitem{7} Bhargavan, M., 2000.
+               The Effect of Employer-Provided Health Insurance on Labor Market Participation.
+               PhD Dissertation, Rutgers University.
+
+%\bibitem{8} Blumberg, R.L., 1988.
+%        Income under female versus male control: hypotheses from a theory of gender stratification and data from the third world.
+%                Journal of Family Issues 9 (1), 51-84.
+
+%\bibitem{9} Blumberg, R.L., Coleman, M.T., 1989.
+%             A theoretical look at the gender balance of power in the American couple.
+%             Journal of Family Issues 10 (2), 225-250.
+
+%\bibitem{10} Buchmueller, T.C., Lettau, M.K., 1997.
+%              Estimating the wage-health insurance trade-off: more data problems?
+%              Working Paper, University of California at Irvine.
+
+%\bibitem{11} Buchmueller, T.C., Valletta, R.G., 1998.
+%                 Health Insurance and the U.S. Labor Market.
+%                 FRBSF Economic Letter, Federal Reserve Bank of San Francisco:
+%                 http://www.frbsf.org/econrsrch/wklyltr/wklyltr98/el98-12.html
+
+\bibitem{12} Buchmueller, T.C., Valletta, R.G., 1998.
+                  The Effect of Health Insurance on Married Female Labor Supply.
+                  \emph{Journal of Human Resources} 34 (1), pp. 42-70.
+
+\bibitem{13} Chamberlain, G., 1982. Multivariate Regression Models for Panel Data. \emph{Journal of Econometrics} 18 (1), pp. 5-46.
+
+\bibitem{14} Chamberlain, G., 1984. Panel Data. in: Griliches, Z., Intriligator, M.D. (Ed.)
+                  \emph{Handbook of Econometrics}, Volume 2. North Holland, Amsterdam, pp. 1247-1318.
+
+\bibitem{15} Currie, J., Madrian, B.C., 1999.
+             Health, Health Insurance and the Labor Market.
+             in: Ashenfelter, O., Card, D. (Ed.) \emph{Handbook of Labor Economics}. North-Holland, Amsterdam, pp. 3309-3416.
+\bibitem{15} Dey, M. S. and Flinn, C. J., 2005.
+             An Equilibrium Model of Health Insurance
+             Provision and Wage Determination. \emph{Econometrica}, 73(2), pp. 571-627.
+\bibitem{15} Dey, M. S. and Flinn, C. J., 2008.
+             Household Search and Health Insurance Coverage.
+             \emph{Journal of Econometrics}, 145(1-2), pp. 43-63.
+%\bibitem{16} Due, J.M., Gladwin, C.H., 1991.
+%                  Impact of structural adjustment programs on African women farmers and female headed households
+%                  American Journal of Agricultural Economics 73 (5), 1431-1439.
+
+%\bibitem{17} Duflo, E., 2000. Grandmothers and granddaughters: Old age pension and intra-household allocation in South Africa.
+%                 NBER Working Paper No. 8061.
+
+%\bibitem{18} England, P., Kilbourne, B.S., 1990.
+%                  Markets, marriages, and other mates: the problem of power.
+%                  in: Friedland, R., Robertson, A.F. (Ed.) Beyond the Marketplace: Rethinking Economy and Society.
+%                 Aldine de Gruyter, New York, pp. 163-89.
+
+%\bibitem{19} Ferber, R., 1971.
+%                 Family decision making and economic behavior: a review.
+%                 in: Sheldon, E.B. (Ed.) Family Economic Behavior: Problems and Prospects.
+%                 J. B. Lippincott Co., Philadelphia.
+
+%\bibitem{20} Friedberg, L., Webb, A., 2006.
+%                 Determinants and consequences of bargaining power in households.
+%                 NBER Working Paper No. 12367.
+
+\bibitem{21} Gentry, W.M., Peress, E., 1994.
+                  Taxes and Fringe Benefits Offered by Employers.
+                  \textit{NBER Working Paper}, No. 4764.
+
+%\bibitem{22} Gladwin, C.H., McMillan, D., 1989.
+%                  Is a turnaround in Africa possible without helping African women to farm?
+%                  Economic Development and Cultural Change 37 (2), 345-369.
+
+%\bibitem{23} Grossman, M., 1972.
+%               On the concept of health capital and the demand for health.
+%               Journal of Political Economy 80 (2), 223-255.
+%
+%\bibitem{24} Grossman, M., 2000.
+%                The human capital model of the demand for health.
+%                in: Culyer A.J., Newhouse, J. (Ed.) Handbook of Health Economics. North-Holland, Amsterdam, pp. 347-408.
+
+\bibitem{25} Gruber, J., 2000.
+                  Health Insurance and the Labor Market.
+                 in: Culyer A.J., Newhouse, J. (Ed.) \emph{Handbook of Health Economics}. North-Holland, Amsterdam, pp. 3309-3416.
+
+\bibitem{26} Gruber, J., Poterba, J., 1996.
+               Tax Subsidies to Employer-Provided Health Insurance.
+               in: Feldstein M., Poterba, J.M. (Ed.) \emph{Empirical Foundations of Household Taxation}.
+               Univeristy of Chicago Press, Chicago, pp. 135-164.
+
+%\bibitem{27} Haddad, L., Hoddinott, J., Alderman, H., (Ed.) 1997.
+%                  Intra-household Resource Allocation in Developing Countries: Models, Methods and Policy.
+%                  The Johns Hopkins University Press, Baltimore,  pp. 112-128.
+%
+%\bibitem{28} Hoddinott, J., Haddad, L., 1995. Does female income share influence household expenditures?
+%                  Evidence from C\^{o}te d'Ivoire. Oxford Bulletin of Economics and Statistics 57 (1), pp. 77-96.
+
+\bibitem{29} Honig, M., Dushi, I., 2005.
+                 Household Demand for Health Insurance: Price and Spouse's Coverage.
+                 Working Paper, Hunter College.
+
+\bibitem{29} Kooreman, P. and Wunderink S., 1997, \emph{The Economics of Household Behaviour}, New York : St. Martin's Press.
+%\bibitem{30} Leibowitz, A., 1983.
+%                  Fringe benefits in employee compensation.
+%                  in: The Measurement of Labor Cost. University of Chicago Press, Chicago, pp. 371-394.
+
+\bibitem{31} Lundberg, S., 1988.
+                  Labor Supply of Husbands and Wives: A Simultaneous Equations Approach.
+                  \textit{Review of Economics and Statistics}, 70 (2), 224-235.
+
+\bibitem{32} Lundberg, S., Pollak, R.A., 1996.
+                 Bargaining and Distribution in Marriage.
+                 \emph{Journal of Economic Perspectives} 10 (4), 139-158.
+
+%\bibitem{33} Lundberg, S., Pollak, R.A., 2003.
+%                  Efficiency in Marriage.
+%                  Review of Economics of the Household, 1 (3),  153-167.
+
+%\bibitem{34} Lundberg, S., Pollak, R.A., Wales, T.J., 1997.
+%                  Do husbands and wives pool their resources? evidence from the United Kingdom child benefit.
+%                  Journal of Human Resources 32 (3), 463-480.
+
+%\bibitem{35} Lundberg, S., Startz R., Stillman, S., 2003.
+%                 The retirement consumption puzzle: a marital bargaining approach.
+%                Journal of Public Economics, 87 (5-6), 1199-1218.
+
+%\bibitem{36} Manser, M., Brown, M., 1980.
+%                 Marriage and household decision-making: a bargaining analysis.
+%                 International Economic Review 21 (1), 31-44.
+
+\bibitem{37} McElroy, M.B., 1990.
+                 The Empirical Content of Nash-Bargained Household Behavior.
+                \emph{Journal of Human Resources} 25 (4), 559-583.
+
+%\bibitem{38} McElroy, M.B., Horney, M.J., 1981.
+%                  Nash-bargained household decisions: toward a generalization of the theory of demand.
+%                  International Economic Review 22 (2), 333-349.
+
+\bibitem{39} Marquis, M.S., Kapur, K., 2004.  Family Decision Making When Two Workers are Offered Group Coverage.
+                  Unpublished manuscript, University College Dublin
+
+%\bibitem{40} Miller Jr., R.D., 2004.
+%                  Estimating compensating differentials for employer-provided health insurance benefits.
+%                  International Journal of Health Care Finance and Economics 4 (1), 27-41.
+
+%\bibitem{41} Monheit, A.C., 1985.
+%                 The employed uninsured and the role of public policy. National health care expenditures study.
+%                  Inquiry 22, pp. 348-364.
+
+\bibitem{42} Monheit, A.C., Schone, B.S., Taylor, A.K., 1999. Health Insurance Choices in Two-Worker Households:
+                  Determinants of Double Coverage. \emph{Inquiry} 36, pp. 12-29.
+
+
+\bibitem{43} Olson, C.A., 1998.
+         A Comparison of Parametric and Semiparametric Estimates of the Effect of Spousal Health Insurance Coverage on
+         Weekly Hours Worked by Wives.
+             \emph{Journal of Applied Econometrics} 13 (5), 543-565.
+
+\bibitem{44} Olson, C.A., 2000.
+                  Part-Time Work, Health Insurance Coverage, and the Wages of Married Women.
+                 in: Alpert, W.T., Woodbury, S.A. (Ed.) \emph{Employee Benefits and Labor Markets in Canada and the United States}.
+                 W. E. Upjohn Institute for Employment Research, Kalamazoo, Michigan, pp. 295-324.
+
+\bibitem{45} Pencavel, J., 1998.
+                 Assortative Mating by Schooling and the Work Behavior of Wives and Husbands.
+                 \emph{American Economic Review} 88 (2), 326-329.
+
+%\bibitem{46} Phipps, S.A., Burton, P.S., 1998.
+%                  What's mine is yours? The influence of male and female incomes on patterns of household expenditure.
+%                  Economica 65, 599-613.
+
+%\bibitem{47} Pollak, R.A., 2005.
+%                  Bargaining power in marriage: earning, wage rates and household production.
+%                  NBER Working Paper No. 11239.
+\bibitem{47} Reiss P. C. and Wolak F. A., 2007, Structural Econometric Modeling: Rationales and
+Examples from Industrial Organization, in J. J. Heckman and E. E. Leamer (eds.),
+Handbook of Econometrics, Volume 6A, Chapter 64, North Holland, pp. 4277-4415.
+
+\bibitem{47} Royalty, A.B., 2000, Tax Preferences for Fringe Benefits and Workers' Eligibility for
+ Employer Health Insurance, \textit{Journal of Public Economics}, 72(2), 209—227.
+
+
+\bibitem{48} Royalty, A.B., Abraham, J.M., 2006.
+                  Health Insurance and Labor Market Outcomes: Joint Decision-Making Within Households.
+                  \emph{Journal of Public Economics} 90 (8-9), 1561-1577.
+
+%\bibitem{49} Ryan, S., 1997.
+%                 Employer-provided health insurance and compensating wage differentials: evidence from the survey of
+%                 income and program participation.
+%                 Working Paper, University of Missouri at Columbia.
+
+\bibitem{50} Schone, B.S., Vistnes, J.P., 2001.
+                 The Relationship Between Health Insurance and Labor Force Decisions: An Analysis of Married Women.
+                 Working Paper, Agency for Healthcare Research and Quality, U.S. Department of Health and Human Services.
+
+%\bibitem{51} Sprey, J., 1972.
+%                 Family power structure: a critical comment.
+%                 Journal of Marriage and the Family 34 (2), 235-238.
+%
+%\bibitem{52} Turk, J.L., Bell, N.W., 1972.
+%                  Measuring power in families.
+%                  Journal of Marriage and the Family 34 (2), 215-223.
+%
+%\bibitem{53} Turner, R.H., 1970.
+%                   Family Interaction. Wiley $\&$ Sons, New York.
+
+\bibitem{54} Wellington, A.J., Cobb-Clark, D.A., 2000.
+                 The Labor-Supply Effects of Universal Health Coverage: What Can We Learn From Individuals With Spousal Coverage.
+                  in: Polachek S. (Ed.) \emph{Research in Labor Economics}, vol. 19. Elsevier Science, Amsterdam, pp. 315-344.
+
+\bibitem{55} Woodbury, S.A., Huang, W., 1991.
+                  \emph{The Tax Treatment of Fringe Benefits}. W. E. Upjohn Institute for Employment Research, Kalamazoo, Michigan.
+
+%\bibitem{56} Wooldridge, J., 1995.
+%                  Selection corrections for panel data models under conditional mean independence assumptions.
+%                  Journal of Econometrics 68 (1), 115-132.
+
+\bibitem{57} Wooldridge, J., 2010. \emph{Econometric Analysis of Cross Section and Panel Data}.
+                 The MIT press, Cambridge, Massachusetts.
+
+\end{thebibliography}
+
+
+
+\newpage \extrarowheight=-7pt
+\begin{longtable}{@{}l@{\hspace{-8pt}}l}\label{Table_1}\\[-2pt]
+\caption{Variables Definition}\\[-2pt]
+\toprule
+Variable& Definition\\
+\hline\\[-6pt]
+\textbf{Proxy Variables}\\[-2pt]
+\hspace{0.5cm}Income share&Personal income divided by total personal
+incomes\\
+\textbf{Health Insurance Variables}\\[-2pt]
+\hspace{0.5cm}Husband's offer&Dummy variable =1 if husband has an
+offer
+of \\[-6pt]
+\hspace{0.5cm}&employer health insurance, =0 otherwise \\[-2pt]
+\hspace{0.5cm}Wife's offer&Dummy variable =1 if husband has an offer
+of \\[-6pt]&employer health insurance, =0 otherwise \\[-6pt]
+\textbf{Human Capital Characteristics}\\[-2pt]
+\hspace{0.5cm}Age&Age of a person\\[-2pt]
+\hspace{0.5cm}Education&Number of years of education of a person\\[-2pt]
+\hspace{0.5cm}Non-white&Dummy variable =1 if a person is non-white,\\[-6pt]
+& =0 otherwise\\[-2pt]
+\hspace{0.5cm}Perceived health&Dummy variable =1 if a person is in good health  \\[-6pt]
+\hspace{0.5cm}status &status,=0 otherwise\\[-1pt]
+\textbf{Income and Job Characteristics}\\[-2pt]
+\hspace{0.5cm}Personal income& The sum of all personal income components  \\[-3pt]
+\hspace{0.5cm}Wage& Hourly wage for the current main job \\[-3pt]
+\hspace{0.5cm}Union&Dummy variable =1 if a person belongs to a labor \\[-5pt] &union, =0 otherwise \\[-3pt]
+\hspace{0.5cm}Pension&Dummy variable =1 if a person has a pension plan\\[-5pt] &through employer, =0 otherwise  \\[-3pt]
+\hspace{0.5cm}Sick pay&Dummy variable =1 if a person paid sick leave\\[-5pt] &through employer, =0 otherwise  \\[-3pt]
+\hspace{0.5cm}Tenure&The term during the current main job \\[-3pt]
+\hspace{0.5cm}Employed&Dummy variable =1 if a person is employed,\\[-5pt] &=0 otherwise  \\[-1pt]
+\textbf{Family Characteristics}\\[-2pt]
+\hspace{0.5cm}Kid0-18&Number of children in the household under 18\\[-2pt]
+\hspace{0.5cm}Regional unemp. rate (\%)&Unemployment rate for region in which the \\[-3pt]&household resides\\[-1pt]
+\textbf{Region Dummy Variables}\\[-2pt]
+\hspace{0.5cm}Northeast&Dummy variable =1 if a person resides in Northeast\\[-5pt] & Census Region, =0 otherwise \\[-3pt]
+\hspace{0.5cm}Midwest&Dummy variable =1 if a person resides in Midwest\\[-5pt] &Census Region, =0 otherwise \\[-3pt]
+\hspace{0.5cm}South&Dummy variable =1 if a person resides in South\\[-5pt] &Census Region, =0 otherwise \\[-3pt]
+\hspace{0.5cm}West&Dummy variable =1 if a person resides in West\\[-5pt] &Census Region, =0 otherwise \\[-3pt]
+\textbf{Instruments Variables$^{a}$}\\[-2pt]
+\hspace{0.5cm}Firm size &The number of employees at the person's
+current
+\\[-5pt]
+& main job\\[-1pt]
+\hspace{0.5cm}Industry Group&The industry codes for a person's
+current
+main job \\[-1pt]
+\bottomrule \multicolumn{2}{l}{Note: a. For people not employed, the values of these IV are zeros.}\\[-8pt]
+\end{longtable}
+
+
+
+
+\newpage
+\extrarowheight=-8pt
+\begin{longtable}{@{}l@{}.{3}c@{}c@{}c@{}c@{}}\label{Table_2}\\
+\caption{Sample Statistics by Family EPHI Status}\\
+\toprule
+&\multicolumn{1}{r}{Total}&Both&None&Wife&Husband\\[-2pt]
+\multicolumn{1}{c}{Variables}&&&&Only&Only\\[-2pt]
+\midrule
+\endfirsthead
+\toprule
+\multicolumn{1}{c}{Variables}&\multicolumn{1}{r}{Total}&Both&None&Wife&Husband\\[-2pt]
+&&&&Only&Only\\[-2pt]
+\midrule
+\endhead
+\multicolumn{6}{r}{(continued)}
+\endfoot
+\endlastfoot
+\multicolumn{2}{c}{\textbf{Household Income }}  &&&&\\[-2pt]
+\multicolumn{2}{l}{\textit{Personal Income (in \$1,000)}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&43.058&47.791&24.229&34.578&55.006\\[-2pt]
+&(34.965)&(31.021)&(24.389)&(27.840)&(38.759)\\
+\hspace{0.5cm}Wife&26.815&42.761&12.462&45.172&20.468\\[-2pt]
+&(28.691)&(26.275)&(17.662)&(30.646)&(27.103)\\[-2pt]
+\multicolumn{2}{l}{\textit{Household Income Share}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband& 0.636&0.524&0.667&0.418&0.756\\[-2pt]
+&\hspace{4mm}(0.272)&(0.140)&(0.313)&(0.209)&(0.245)\\[-2pt]
+\hspace{0.5cm}Wife&0.359&0.476&0.314&0.582&0.244\\[-2pt]
+&\hspace{2mm}(0.270)&(0.140)&(0.302)&(0.209)&(0.245)\\[-2pt]
+\multicolumn{2}{c}{\textbf{Human Capital}}  &&&&\\[-4pt]
+\multicolumn{2}{c}{\textbf{Characteristics}} &&&&\\[-2pt]
+\multicolumn{2}{l}{\textit{Age}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&44.010&43.763&43.816&45.450&43.710\\[-2pt]
+&\hspace{2mm}(10.029)&(9.433)&(11.345)&(10.168)&(9.374)\\[-2pt]
+\hspace{0.5cm}Wife&41.821&41.632&41.331&43.359&41.632\\[-2pt]
+&\hspace{4mm}(9.950)&(9.298)&(11.411)&(9.384)&(9.482)\\
+\multicolumn{2}{l}{\textit{Education}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&12.645&13.737&10.594&13.139&13.129\\[-2pt]
+&\hspace{4mm}(3.410)&(2.568)&(3.873)&(2.846)&(3.172)\\[-2pt]
+\hspace{0.5cm}Wife&12.720&14.099&10.619&13.617&12.939\\[-2pt]
+&\hspace{4mm}(3.463)&(2.521)&(3.780)&(2.957)&(3.280)\\
+\multicolumn{2}{l}{\textit{Non-white}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&0.177&0.249&0.134&0.241&0.142\\[-2pt]
+&\hspace{4mm}(0.382)&(0.433)&(0.341)&(0.428)&(0.349)\\[-2pt]
+\hspace{0.5cm}Wife&0.181&0.263&0.138&0.229&0.146\\[-2pt]
+&\hspace{4mm}(0.385)&(0.441)&(0.345)&(0.421)&(0.353)\\
+\multicolumn{3}{l}{\textit{Perceived health status}}&&&\\[-2pt]
+\hspace{0.5cm}Husband&0.600&0.658&0.492&0.566&0.647\\[-2pt]
+&\hspace{4mm}(0.490)&(0.475)&(0.500)&(0.496)&(0.478)\\[-2pt]
+\hspace{0.5cm}Wife&0.586&0.641&0.467&0.634&0.611\\[-2pt]
+&\hspace{4mm}(0.493)&(0.480)&(0.499)&(0.482)&(0.488)\\
+\multicolumn{2}{c}{\textbf{Job Characteristics}}  &&&&\\[-4pt]
+\multicolumn{2}{l}{\textit{Employed}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&0.876&1&0.670&0.707&1\\[-2pt]
+&\hspace{4mm}(0.329)&(0)&(0.470)&(0.455)&(0)\\[-2pt]
+\hspace{0.5cm}Wife&0.630&1&0.365&1&0.465\\[-2pt]
+&(0.483)&(0)&(0.482)&(0)&(0.499)\\
+\multicolumn{2}{l}{\textit{Tenure}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&3.417&5.461&1.440&1.635&4.228\\[-2pt]
+&\hspace{4mm}(6.922)&(8.284)&(3.766)&(4.384)&(7.873)\\[-2pt]
+\hspace{0.5cm}Wife&2.071&4.548&0.605&3.588&1.129\\[-2pt]
+&\hspace{4mm}(5.132)&(6.920)&(2.378)&(6.964)&(3.665)\\
+\multicolumn{2}{l}{\textit{Hourly Wage}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband& 18.882&23.141&8.682&14.513&24.418\\[-2pt]
+&(14.796)&(12.746)&(9.149)&(13.500)&(15.256)\\
+\hspace{0.5cm}Wife&10.822&19.203&3.866&20.069&7.287\\[-2pt]
+&(12.285)&(10.798)&(6.641)&(12.968)&(10.808)\\
+%\multicolumn{2}{l}{Union}&&&&\\[-2pt]
+%\hspace{0.5cm}Husband&0.062&0.116&0.008&0.017&0.083\\[-2pt]
+%&\hspace{4mm}(0.241)&(0.321)&(0.091)&(0.130)&(0.277)\\[-2pt]
+%\hspace{0.5cm}Wife&0.034&0.080&0.010&0.076&0.010\\[-2pt]
+%&\hspace{4mm}(0.181)&(0.271)&(0.101)&(0.264)&(0.098)\\
+\multicolumn{2}{l}{\textit{Pension Plan}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&0.513&0.737&0.088&0.326&0.723\\[-2pt]
+&\hspace{4mm}(0.500)&(0.441)&(0.284)&(0.469)&(0.447)\\[-2pt]
+\hspace{0.5cm}Wife&0.357&0.726&0.060&0.729&0.208\\[-2pt]
+&\hspace{4mm}(0.479)&(0.446)&(0.238)&(0.444)&(0.406)\\
+\multicolumn{2}{l}{\textit{Sick Pay}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&0.559&0.745&0.175&0.403&0.752\\[-2pt]
+&\hspace{4mm}(0.497)&(0.436)&(0.380)&(0.491)&(0.432)\\[-2pt]
+\hspace{0.5cm}Wife&0.418&0.826&0.090&0.850&0.248\\[-2pt]
+&\hspace{4mm}(0.493)&(0.379)&(0.286)&(0.357)&(0.432)\\
+\multicolumn{2}{c}{\textbf{Family Characteristics}} &&&&\\[-2pt]
+
+\multicolumn{1}{l}{\textit{Kid0-18}}&\hspace{4mm}1.547&1.219&1.791&1.237&1.682\\[-2pt]
+&\hspace{4mm}(1.379)&(1.208)&(1.479)&(1.252)&(1.391)\\[-2pt]
+\multicolumn{1}{l}{\textit{Regional unemp.}}&\hspace{4mm}4.620&4.670&4.608&4.614&4.604\\[-2pt]
+\multicolumn{1}{l}{\hspace{2mm}\textit{rate} (\%)}&\hspace{4mm}(0.336)&(0.340)&(0.356)&(0.323)&(0.325)\\[-2pt]
+\multicolumn{2}{c}{\textbf{Geographical}} &&&&\\[-2pt]
+\multicolumn{2}{c}{\textbf{Distribution}} &&&&\\[-2pt]
+
+\multicolumn{1}{l}{\textit{Northeast}}&\hspace{4mm}0.160&0.163&0.173&0.206&0.173\\[-2pt]
+&\hspace{4mm}(0.367)&(0.369)&(0.311)&(0.404)&(0.378)\\
+\multicolumn{1}{l}{\textit{Midwest}}&\hspace{4mm}0.205&0.229&0.126&0.226&0.231\\[-2pt]
+&\hspace{4mm}(0.403)&(0.421)&(0.332)&(0.418)&(0.421)\\
+\multicolumn{1}{l}{\textit{South}}&\hspace{4mm}0.362&0.363&0.409&0.362&0.333\\[-2pt]
+&\hspace{4mm}(0.481)&(0.481)&(0.492)&(0.481)&(0.471)\\
+\multicolumn{1}{l}{\textit{West}}&\hspace{4mm}0.273&0.245&0.357&0.207&0.263\\[-2pt]
+&\hspace{4mm}(0.446)&(0.430)&(0.479)&(0.405)&(0.440)\\
+\multicolumn{2}{c}{\textbf{Instruments}}  &&&&\\[-4pt]
+\multicolumn{2}{c}{\textbf{Variables}}  &&&&\\[-2pt]
+\multicolumn{2}{l}{\textit{Firm size}}&&&&\\[-2pt]
+\hspace{0.5cm}Husband&144.271&189.931&52.9425&82.300&198.594\\[-2pt]
+&\hspace{2mm}(178.500)&(185.914)&(111.169)&(145.174)&(189.052)\\
+\hspace{0.5cm}Wife&100.705&189.273&28.898&207.897&58.806\\[-2pt]
+&\hspace{2mm}(168.073)&(197.240)&(85.373)&(197.093)&(135.493)\\[-2pt]
+\hline
+Number of &&&&&\\[-4pt]
+observations&\multicolumn{1}{r}{6920}&\multicolumn{1}{r}{1408}&\multicolumn{1}{r}{1662}&\multicolumn{1}{r}{1046}&\multicolumn{1}{r}{2804}\\
+\bottomrule
+\end{longtable}
+
+
+%\newpage
+%\begin{longtable}{@{}lcccccc@{}}\label{Table_3}\\
+%\caption{First-stage results}\\
+%%\multicolumn{3}{l}{Endogenous variables (Spouse offer)}\\
+%\toprule &\multicolumn{2}{c}{Female share
+%equation}&\multicolumn{2}{c}{Male share
+%equation}&\multicolumn{2}{c}{Offer
+%equation}\\[-3pt]
+% &\multicolumn{2}{c}{endogenous
+%variables}&\multicolumn{2}{c}{endogenous
+%variables}&\multicolumn{2}{c}{endogenous variables}\\[-3pt]
+%\cmidrule(l){2-3}\cmidrule(l){4-5}\cmidrule(l){6-7}
+%&Subsample&Subsample&Subsample&Subsample&Female&Male\\[-3pt]
+%&(1)&(2)&(3)&(4)&sample&sample\\[-3pt]
+%&Husband&Husband&Wive&Wive&Husband&Wive\\[-3pt]
+%Instruments&offer&offer&offer&offer&offer&offer\\[-3pt]
+%\midrule
+%Firm size&0.001&0.001&0.001&0.000&0.003&0.002\\[-3pt]
+%&(0.000)&(0.000)&(0.000)&(0.000)&(0.001)&(0.000)\\
+%Industry&0.032&0.043&0.015&0.032&0.115&0.101\\[-3pt]
+%\hspace{2mm} group&(0.007)&(0.010)&(0.004)&(0.004)&(0.018)&(0.011)\\
+%%Wage&-0.001&-0.002&0.000&0.004&-0.004&0.006\\[-3pt]
+%%&(0.001)&(0.003)&(0.001)&(0.002)&(0.006)&(0.006)\\
+%\multicolumn{2}{c}{\textbf{F test of interactions$^{a}$}}\\
+%Age&1.34&1.02&0.74&1.51&6.99&4.84\\[-3pt]
+%\hspace{2mm} [$p$-value]&(0.244)&(0.405)&(0.596)&(0.183)&(0.221)&(0.436)\\
+%Age$^{2}$/100&1.10&1.07&0.76&1.52&4.75&4.48\\[-3pt]
+%\hspace{2mm} [$p$-value]&(0.361)&(0.376)&(0.582)&(0.181)&(0.447)&(0.483)\\
+%Education&1.22&2.04&1.13&0.82&30.01&21.65\\[-3pt]
+%\hspace{2mm} [$p$-value]&(0.303)&(0.087)&(0.343)&(0.513)&(0.000)&(0.001)\\
+%Non-white&0.78&1.11&2.07&0.66&5.52&6.13\\[-3pt]
+%\hspace{2mm} [$p$-value]&(0.539)&(0.349)&(0.083)&(0.619)&(0.356)&(0.294)\\
+%\multicolumn{2}{c}{\textbf{Joint significance$^{a}$}}\\
+%All IVs&5.58&6.77&3.02&5.30&184.83&171.27\\[-3pt]
+%\hspace{2mm} [$p$-value]&(0.000)&(0.000)&(0.000)&(0.000)&(0.000)&(0.000)\\
+%Number of&&&&&&\\[-3pt]
+%\hspace{2mm}observations&4469&2451&2710&4210&6920&6920\\
+%\bottomrule \multicolumn{7}{l}{\footnotesize Note that since there
+%are 5 periods
+%in MEPS, there are 4 interaction terms for each variable and the}\\[-3pt]
+%\multicolumn{7}{l}{\footnotesize  results are joint test of these interactions.}\\[-3pt]
+%\end{longtable}
+%%\begin{tablenotes}
+%%\footnotesize
+%%%\noindent
+%%Note: $^{a}$Variables that are not changed over time was dropped in the share equation. Only coefficients of excluded instrument variables are reported. Standard errors presented in parentheses are robust to arbitrary heteroskedasticity and correlation within households over time. * significant at $10\%$; ** significant at $5\%$; *** significant at $1\%$.
+%%%\end{tablenotes}
+
+%\begin{tablenotes}
+%\begin{center}
+%\scriptsize \noindent
+%Robust standard errors are presented in parentheses. \\
+%* significant at $10\%$; ** significant at $5\%$; *** significant at $1\%$.
+%\end{center}
+
+%\end{tablenotes}
+\normalsize
+
+\newpage
+
+\begin{longtable}{@{}l.{3}@{}.{3}}\label{Table_4}\\
+\caption{Pooled Probit IV Regressions: Dependent Variables (EPHI Offer)} \\
+\multicolumn{3}{l}{}\\
+\toprule
+&\multicolumn{1}{r}{Wives}&\multicolumn{1}{r}{Husbands}\\
+\hline
+Husbands offer&\llap{-}0.496^{*}&\llap{--}\\[-3pt]
+&(0.284)&\llap{--}\\
+Wife offer&\llap{--}&\llap{-}0.420^{*}\\[-3pt]
+&\llap{--}&(0.225)\\
+Employed&5.578^{***}&5.801^{***}\\[-3pt]
+&(0.200)&(0.270)\\
+Tenure&0.002&0.002\\[-3pt]
+&(0.005)&(0.003)\\
+Wage&0.002&0.014^{*}\\[-3pt]
+&(0.007)&(0.007)\\
+Pension plan&0.704^{***}&0.857^{***}\\[-3pt]
+&(0.204)&(0.204)\\
+Sick pay&0.693^{***}&0.557^{***}\\[-3pt]
+&(0.209)&(0.160)\\
+Kid0-18&\llap{-}0.074&0.043\\[-3pt]
+&(0.082)&(0.057)\\
+Perceived health &0.029&0.017\\[-3pt]
+\hspace{2mm}status&(0.048)&(0.037)\\
+Regional unemp.&\llap{-}0.218&0.133\\[-3pt]
+\hspace{2mm}rate (\%) &(0.221)&(0.213)\\
+Test of fixed effect&64.01&66.56\\[-3pt]
+\hspace{2mm} ($p$-value)&(0.002)&(0.001)\\
+APE for spouse offer&\llap{-}0.053&\llap{-}0.064\\
+Human capital&\multicolumn{1}{c}{Yes}&\multicolumn{1}{c}{Yes}\\
+\hspace{2mm}characteristics&&\\
+Region dummies&\multicolumn{1}{c}{Yes}&\multicolumn{1}{c}{Yes}\\
+\midrule
+Number of observations&\multicolumn{1}{c}{6920}&\multicolumn{1}{c}{6920}\\
+\bottomrule  \multicolumn{3}{l}{\scriptsize Robust standard errors
+are presented in parentheses.}\\[-5pt]
+\multicolumn{3}{l}{\scriptsize * significant at 10\%; ** significant
+at 5\%; *** signif-}\\[-5pt]
+\multicolumn{3}{l}{\scriptsize icant at 1\%.}\\[-5pt]
+\multicolumn{3}{l}{\scriptsize Region dummies include Northeast, Midwest, and West.}\\[-3pt]
+\multicolumn{3}{l}{\scriptsize Human capital characteristics contain interactions of }\\[-6pt]
+\multicolumn{3}{l}{\scriptsize Age, Age$^{2}$/100, Education, and Non-white  with }\\[-6pt]
+\multicolumn{3}{l}{\scriptsize time dummies.}\\[-3pt]
+\end{longtable}
+%%\begin{tablenotes}
+%\begin{center}
+%\scriptsize \noindent Robust standard errors are presented in
+%parentheses. * significant at $10\%$; ** significant at $5\%$; ***
+%significant at $1\%$.
+%\end{center}
+
+\normalsize
+
+
+\newpage
+
+\begin{longtable}{@{}l@{}.{3}@{}.{3}@{}.{3}@{}.{3}}\label{Table_5}\\
+\caption{Pooled Two Stage Least Square Regressions: Dependent
+Variables (Income Share)
+}\\
+%The effect of spouse's offer on own income share: Dependent Variables (Income Share)
+\multicolumn{3}{r}{}\\
+\toprule &\multicolumn{2}{r}{Female share
+equation}&\multicolumn{2}{r}{Male share
+equation}\\[-3pt]
+\cmidrule(r){2-3}\cmidrule(r){4-5}
+&\multicolumn{1}{r}{Subsample}&\multicolumn{1}{r}{Subsample}&\multicolumn{1}{r}{Subsample}&\multicolumn{1}{r}{Subsample}\\[-3pt]
+&\multicolumn{1}{r}{(1)}&\multicolumn{1}{r}{(2)}&\multicolumn{1}{r}{(3)}&\multicolumn{1}{r}{(4)}\\[-3pt]
+\hline
+Husband's offer&\llap{-}0.123^{***}&\llap{-}0.178^{***}&\llap{--}&\llap{--}\\[-3pt]
+&(0.050)&(0.052)&\llap{--}&\llap{--}\\
+Wife's offer&\llap{--}&\llap{--}&\llap{-}0.184^{***}&\llap{-}0.427^{***}\\[-3pt]
+&\llap{--}&\llap{--}&(0.056)&(0.063)\\
+Employed&0.119^{***}&\llap{--}&0.119^{***}&\llap{--}\\[-3pt]
+&(0.021)&\llap{--}&(0.029)&\llap{--}\\
+Tenure&0.000&0.000&0.000&0.001^{**}\\[-3pt]
+&(0.000)&(0.001)&(0.001)&(0.001)\\
+Wage&0.000&0.000&\llap{-}0.001&0.002\\[-3pt]
+&(0.001)&(0.001)&(0.001)&(0.002)\\
+Pension plan&0.021&\llap{-}0.004&\llap{-}0.099^{***}&\llap{-}0.011\\[-3pt]
+&(0.031)&(0.045)&(0.031)&(0.035)\\
+Sick pay&\llap{-}0.007&0.008&0.066^{**}&0.004\\[-3pt]
+&(0.040)&(0.054)&(0.029)&(0.040)\\
+Kid0-18&0.000&\llap{-}0.029^{*}&\llap{-}0.001&\llap{-}0.003\\[-3pt]
+&(0.000)&(0.018)&(0.018)&(0.015)\\
+Perceived health&0.000&0.001&\llap{-}0.019^{**}&0.017^{**}\\[-3pt]
+\hspace{2mm} status&(0.006)&(0.008)&(0.009)&(0.009)\\
+Regional unemp.&0.016&0.001&\llap{-}0.030&\llap{-}0.049\\[-3pt]
+\hspace{2mm}rate (\%)&(0.047)&(0.053)&(0.077)&(0.052)\\
+Human capital&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}\\[-4pt]
+\hspace{2mm}characteristics&&\\
+Region dummies&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}&\multicolumn{1}{r}{Yes}\\
+Test of overidentifying&13.312&17.517&14.657&13.883\\[-3pt]
+\hspace{2mm}restriction [$p$-value]&0.822&0.555&0.744&0.791\\
+\midrule
+Number of households&\multicolumn{1}{r}{4420} &\multicolumn{1}{r}{2221}&\multicolumn{1}{r}{2630}&\multicolumn{1}{r}{4043} \\
+\bottomrule \multicolumn{5}{l}{\scriptsize Note: robust standard
+errors are presented in parentheses.
+* significant at 10\%; ** significant}\\[-6pt]
+\multicolumn{5}{l}{\scriptsize  at 5\%; *** significant at 1\%.
+}\\[-3pt]
+\multicolumn{5}{l}{\scriptsize Subsample (1), subsample (2),
+subsample (3), and subsample (4)
+ denote the following four}\\[-6pt]
+\multicolumn{5}{l}{\scriptsize  groups, female without EHPI offer,
+female with EHPI offer, male without EHPI offer and }\\[-6pt]
+\multicolumn{5}{l}{\scriptsize  male with EHPI offer, respectively.}\\[-3pt]
+\multicolumn{5}{l}{\scriptsize Region dummies include Northeast, Midwest, South, and West.}\\[-3pt]
+\multicolumn{5}{l}{\scriptsize Human capital characteristics contain interactions of Age, Age$^{2}$/100, Education, and Non-white }\\[-6pt]
+\multicolumn{5}{l}{\scriptsize with time dummies.}\\[-3pt]
+\end{longtable}
+
+\newpage
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figure1.pdf}
+
+\caption{The Cooperative Household EPHI Access Decisions}\label{figure1}
+\end{center}
+\end{figure}
+
+
+
+\end{document}
